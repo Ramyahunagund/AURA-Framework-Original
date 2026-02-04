@@ -1,0 +1,107 @@
+from test_flows.CreateIISubscription.create_ii_subscription import create_ii_subscription
+from core.playwright_manager import PlaywrightManager
+from core.settings import framework_logger
+from helper.dashboard_helper import DashboardHelper
+from helper.gemini_ra_helper import GeminiRAHelper
+from helper.ra_base_helper import RABaseHelper
+from pages.dashboard_side_menu_page import DashboardSideMenuPage
+from pages.overview_page import OverviewPage
+from pages.print_history_page import PrintHistoryPage
+from playwright.sync_api import expect
+import urllib3
+import test_flows_common.test_flows_common as common
+import traceback
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+TC = "C42473762"
+def additional_pages_progress_bar_with_free_months(stage_callback):
+    framework_logger.info("=== C42473762 - Rollover Pages progress bar with free months flow started ===")
+    tenant_email = create_ii_subscription(stage_callback)
+
+    with PlaywrightManager() as page:
+        overview_page = OverviewPage(page)
+        print_history_page = PrintHistoryPage(page)
+        side_menu = DashboardSideMenuPage(page)
+        try:
+            # Move to subscribed state
+            GeminiRAHelper.access(page)
+            GeminiRAHelper.access_tenant_page(page, tenant_email)
+            GeminiRAHelper.access_subscription_by_tenant(page)
+            GeminiRAHelper.subscription_to_subscribed(page)
+            framework_logger.info(f"Subscription status updated to 'subscribed'")
+   
+            # Add free pages visible as 15
+            GeminiRAHelper.access_first_billing_cycle(page)
+            GeminiRAHelper.add_free_pages_visible(page, "15")
+            framework_logger.info("Added 15 free pages visible")
+            GeminiRAHelper.define_page_tally(page, "730")
+
+            # Access Overview page
+            DashboardHelper.first_access(page, tenant_email)
+            framework_logger.info(f"Accessed Overview page")
+
+            # Verify the progress bars for plan, trial, rollover, credits pages on Overview page
+            DashboardHelper.verify_progress_bars_visible(page)
+            framework_logger.info("Progress bars verified on Overview page")
+
+            # Sees the plan pages as 100 of 100 used on Overview page
+            DashboardHelper.verify_pages_used(page, "plan", 100, 100)
+            framework_logger.info("Plan pages verified as 100 of 100 used on Overview page")
+
+            # Sees the credited pages as 15 of 15 used on Overview page
+            DashboardHelper.verify_pages_used(page, "credited", 15, 15)
+            framework_logger.info("Credited pages verified as 15 of 15 used on Overview page")
+
+            # Sees the trial pages as 615 of 615 used on Overview page
+            DashboardHelper.verify_trial_pages_used(page, 615)
+            framework_logger.info("Trial pages verified as 615 used on Overview page")
+
+            # Sees the rollover pages as 0 of 0 used on Overview page
+            DashboardHelper.verify_pages_used(page, "rollover", 0, 0)
+            framework_logger.info("Rollover pages verified as 0 of 0 used on Overview page")
+
+            # total
+            DashboardHelper.verify_total_pages_printed(page, 730)
+
+            overview_page = OverviewPage(page)
+            overview_page.additional_pages_bar
+            expect(overview_page.additional_pages_bar).not_to_be_visible()
+
+            # Access Print History Page
+            side_menu.click_print_history()
+            expect(print_history_page.print_history_card_title).to_be_visible(timeout=90000)
+            framework_logger.info("Accessed Print History page")
+
+            # Verify the progress bars for plan, trial, rollover, credits pages on Overview page
+            DashboardHelper.verify_progress_bars_visible(page)
+            framework_logger.info("Progress bars verified on Overview page")
+
+            # Sees the plan pages as 100 of 100 used on Overview page
+            DashboardHelper.verify_pages_used(page, "plan", 100, 100)
+            framework_logger.info("Plan pages verified as 100 of 100 used on Overview page")
+
+            # Sees the credited pages as 15 of 15 used on Overview page
+            DashboardHelper.verify_pages_used(page, "credited", 15, 15)
+            framework_logger.info("Credited pages verified as 15 of 15 used on Overview page")
+
+            # Sees the trial pages as 615 of 615 used on Overview page
+            DashboardHelper.verify_trial_pages_used(page, 615)
+            framework_logger.info("Trial pages verified as 615 of 615 used on Overview page")
+
+            # Sees the rollover pages as 0 of 0 used on Overview page
+            DashboardHelper.verify_pages_used(page, "rollover", 0, 0)
+            framework_logger.info("Rollover pages verified as 0 of 0 used on Overview page")
+
+            # total
+            DashboardHelper.verify_total_pages_printed(page, 730)
+            
+            overview_page = OverviewPage(page)
+            overview_page.additional_pages_bar
+            expect(overview_page.additional_pages_bar).not_to_be_visible()
+
+            framework_logger.info("Verified progress bars for plan and rollover pages on Print History page")
+
+            framework_logger.info("=== C42407561 - Rollover Pages progress bar with free months flow finished ===")
+        except Exception as e:
+            framework_logger.error(f"An error occurred during the flow C42407561: {e}\n{traceback.format_exc()}")
+            raise e

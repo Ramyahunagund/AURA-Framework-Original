@@ -1,0 +1,22 @@
+%YAML 1.2  
+---
+spec_version: "1.0"
+ 
+test_case: "Regression Tests"
+version: "1.0"      
+description: "Test cases related to Regression tests"
+ 
+batches:
+  - name: regression_01_status_card
+    execution: sequential
+    files:
+      - test_cases/overview_status_card.yaml
+      - test_cases/overview_printer_details_modal.yaml
+      - test_cases/overview_status_card_monthly_summary.yaml
+      - test_cases/overview_status_card_view_printer_history.yaml
+   
+  - name: regression_01_plan_details_card
+    execution: sequential
+    files:
+      - test_cases/overview_plan_details_card_enroll_with_billing_change_link.yaml
+      - test_cases/contact_expert_support.yaml

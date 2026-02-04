@@ -1,0 +1,94 @@
+locale:
+  country: "US"
+  language: "ENGLISH"
+
+login:
+  url: "https://instantink-stage1.hpconnectedstage.com/"   
+  bck: "https://www.hpsmartstage.com/us/en"
+
+  username: "USERNAME TO BE ADDED"
+  password: "PASSWORD TO BE ADDED"
+
+log_file: ""
+tmp_folder: ""
+common_test_components: ""
+large_wait: "16"  # minutes; expected to be greater than 15 minutes
+
+metadata: 
+  controls: ""
+  reference_images: ""
+  
+printers:
+  - pie:
+      - model: HP ENVY Photo 7855 All-in-One Printer
+        serial_number: QCW7OXYM76
+        description: subscribed
+        selected_printer: True                 
+      
+      - model: HP ENVY Photo 7855 All-in-One Printer
+        serial_number: K5T8RHL99T      
+        description: out_of_trial_period
+
+      - model: HP ENVY Photo 7855 All-in-One Printer
+        serial_number: 25Y9RSE21C
+        description: unsubscribed
+
+      - model: HP ENVY Photo 7855 All-in-One Printer
+        serial_number: 2N94NDLZVR
+        description: initiate_unsubscribe
+
+      - model: HP ENVY Photo 7855 All-in-One Printer
+        serial_number: 5517C5K9DD
+        description: subscribed_no_pens
+       
+  - stage:
+      - model: ENVY Photo All-in-One Printer series
+        serial_number: 
+        description: subscribed
+      
+      - model: TANGO
+        serial_number: 
+        description: subscription_no_pens
+
+      - model: ENVY Photo All-in-One Printer series
+        serial_number: 
+        description: initiate_unsubscribe
+
+      - model: HP OfficeJet Pro 9020 series
+        serial_number: 
+        description: unsubscribed
+
+      - model: TANGO
+        serial_number: 
+        description: out_of_trial_period
+
+      - model: ENVY Photo All-in-One Printer series
+        serial_number: 
+        description: out_of_trial_period
+
+      - model: HP OfficeJet Pro 9020 series
+        serial_number: 
+        description: unsubscribed
+
+llm:
+  provider: "azure openai"
+  model: "gpt-4o"
+  schema_file: ./schemas/login_schema.json
+  azure_endpoint: "PROVIDE ZURE END POINT"
+  deployment: "PROVIDE ZURE END DEP"
+  api_key: "PROVIDE API KEY"
+  api_version: "PROVIDE API VERSION"
+
+output:
+  screenshot_dir: "./screenshots"
+  dom_dir: "./dom"
+  metadata_dir: "./metadata"
+
+# optional hints help the LLM if needed
+hints:
+  button_texts: ["Log In", "Sign In", "Continue"]
+  user_field_hints: ["email", "username", "user"]
+  password_hints: ["Use password", "password"]
+
+schema: ""
+ai_enabled: True

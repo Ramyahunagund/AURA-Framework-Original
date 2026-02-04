@@ -1,0 +1,107 @@
+%YAML 1.2  
+---
+spec_version: "1.1"
+
+test_case: "update_plan_content_and_layout_header"
+test_case_id: "C31266518"
+version: "1.0"       
+description: "Test Instant Services Update plan content and layout header"
+
+flow:
+  phases:
+    setup:
+      - file: instantservices_login.yaml
+
+    steps:
+      - file: instantservices_dashboard_update.yaml
+
+      - id: TC_update_plan_page_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the word "Update Plan" positioned at the top left. If not, immediately return {{"status": false}}.
+              3. "instant ink" logo appears to the right of "Update Plan". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5
+
+      - id: TC_update_plan_page_2
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. A "Select printer" drop down selector is positioned next to "instant ink". If not, immediately return {{"status": false}}.
+              3. The "Select printer" drop down selector view must contain a printer icon and printer model. If not, immediately return {{"status": false}}.
+              4. "Enroll or replace a printer", hyperlink should appear below drop down selector. If not, immediately return {{"status": false}}.
+              5. "Current plan" is at the bottom of "Update Plan". If not, immediately return {{"status": false}}.
+              6. You should find "Change Plan" and "Cancel Instant Ink" hyperlinks in the "Current Plan" section.  If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5
+
+      - id: TC_enroll_or_replace_a_printer_menu_1
+        page: instantink/Dashboard
+        action: click
+        text: "Enroll or replace a printer"
+        sleep: 2      
+
+      - id: TC_enroll_or_replace_a_printer_modal_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: "enroll_or_replace_printer.png"
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is on the modal dialog.
+              2. Check if title, "Enroll or replace a printer" exist. If not, immediately return {{"status": false}}.
+              3. Validate the presence of "Enroll an additional printer". If not, immediately return {{"status": false}}.
+              4. Validate the presence of "Replace an existing printer".  If not, immediately return {{"status": false}}.
+              6. You should find "Enroll Printer" and "Replace Printer" buttons.  If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+
+      - id: TC_enroll_or_replace_a_printer_modal_close_1
+        page: instantink/Dashboard
+        action: escape
+        sleep: 2      
+
+    cleanup:
+      - file: instantservices_logout.yaml  

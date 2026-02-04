@@ -1,0 +1,181 @@
+%YAML 1.2  
+---
+spec_version: "1.1"
+
+test_case: "hp_instant_ink_content_layout"
+test_case_id: "C31165181"
+version: "1.1"       
+description: "Test Instant Services HP Instant Ink Content Layout"
+
+flow:
+  phases:
+    setup:
+      - file: instantservices_login.yaml
+
+    steps:
+      - id: TC_account_dashboard_1
+        page: instantink/Dashboard
+        action: click
+        text: "Account Dashboard"
+        sleep: 10
+
+      - id: TC_hp_instant_ink_1
+        page: instantink/Dashboard
+        action: click
+        text: "HP Instant Ink"
+        expand: "True"      
+        sleep: 3    
+
+      - id: TC_navigation_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is the navigation pane appearing on the left.
+              2. There must be exactly the word "Overview" positioned to the left and sub-item of "HP Instant Ink". If not, immediately return {{"status": false}}.
+              3. There must be exactly the words "Update Plan" and sub-item of "HP Instant Ink". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Print and Payment History" and sub-item of "HP Instant Ink". If not, immediately return {{"status": false}}.
+              5. There must be exactly the words "Shipment Tracking" and sub-item of "HP Instant Ink". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3     
+
+      - id: TC_overview_button_1
+        page: instantink/Dashboard
+        action: click
+        text: "Overview"
+        sleep: 30
+
+      - id: TC_overview_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the word "Overview" positioned to the left. If not, immediately return {{"status": false}}.
+              3. There must be exactly the words "instant ink" to the right of "Overview". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Select printer" and drop down selectable. If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3  
+
+      - id: TC_update_plan_button_1
+        page: instantink/Dashboard
+        action: click
+        text: "Update Plan"
+        sleep: 20
+
+      - id: TC_update_plan_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the words "Update Plan" positioned to the left. If not, immediately return {{"status": false}}.
+              3. There must be exactly the words "instant ink" to the right of "Overview". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Select printer" and drop down selectable. If not, immediately return {{"status": false}}.
+              5. There must be exactly the words "Current plan" below "Update Plan". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3    
+
+      - id: TC_print_and_payment_history_button_1
+        page: instantink/Dashboard
+        action: click
+        text: "Print and Payment History"
+        sleep: 20
+
+      - id: TC_print_and_payment_history_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the words "Print and Payment History" positioned to the left and wrapped. If not, immediately return {{"status": false}}.
+              3. There must be "instant ink" logo to the right of "Overview". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Select printer" and drop down selectable. If not, immediately return {{"status": false}}.
+              5. There must be exactly the words "Billing will occur at the end of each billing cycle." below "Print and Payment History". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3   
+
+      - id: TC_shipment_tracking_button_1
+        page: instantink/Dashboard
+        action: click
+        text: "Shipment Tracking"
+        sleep: 20
+
+      - id: TC_shipment_tracking_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the words "Shipment Tracking" positioned to the left. If not, immediately return {{"status": false}}.
+              3. There must be exactly the words "instant ink" to the right of "Overview". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Select printer" and drop down selectable. If not, immediately return {{"status": false}}.
+              5. There must be exactly the words "Frequently Asked Questions" below "Shipment Tracking". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3   
+
+  cleanup:
+    - file: instantservices_logout.yaml    

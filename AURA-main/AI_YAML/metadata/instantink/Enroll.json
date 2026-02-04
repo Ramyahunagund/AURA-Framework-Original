@@ -1,0 +1,371 @@
+{
+  "page_info": {
+    "url": "https://instantink-stage1.hpconnectedstage.com/us/en/l/v2",
+    "title": "HP\u00a0Instant\u00a0Ink \u2013 Ink Monthly Subscription | HP Official Site",
+    "timestamp": "2025-08-17 00:25:20.799261",
+    "capture_path": "./dom\\20250817_002459"
+  },
+  "interactive_elements": [    
+    {  
+        "tag_name": "div",  
+        "id": "",  
+        "classes": "",  
+        "text": "Your Plan",  
+        "name": "",  
+        "type": "",  
+        "aria_label": "",  
+        "data_testid": "plan-card",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },   
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='plan-card']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='plan-card']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[1]/div"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Your Plan"  
+    },
+    {  
+        "tag_name": "button",  
+        "id": "",  
+        "classes": "",
+        "text": "",  
+        "name": "",  
+        "type": "button",  
+        "aria_label": "",  
+        "data_testid": "edit-plan",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },  
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='edit-plan']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='edit-plan']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div[2]/div/div[2]/button"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Edit Your Plan"  
+    },
+    {  
+        "tag_name": "div",  
+        "id": "",  
+        "classes": "",  
+        "text": "Shipping",  
+        "name": "",  
+        "type": "",  
+        "aria_label": "",  
+        "data_testid": "shipping-card",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },   
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='shipping-card']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='shipping-card']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[2]/div"
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Shipping"  
+    },
+    {  
+        "tag_name": "button",  
+        "id": "",  
+        "classes": "",
+        "text": "",  
+        "name": "",  
+        "type": "button",  
+        "aria_label": "",  
+        "data_testid": "edit-shipping",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },  
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='edit-shipping']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='edit-shipping']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[2]/div/div[2]/div[2]/button"  
+        ],         
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Edit Shipping"  
+    },
+    {  
+        "tag_name": "div",  
+        "id": "",  
+        "classes": "",  
+        "text": "Billing",  
+        "name": "",  
+        "type": "",  
+        "aria_label": "",  
+        "data_testid": "billing-card",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },   
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='billing-card']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='billing-card']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[3]/div"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Billing"  
+    },
+    {  
+        "tag_name": "button",  
+        "id": "",  
+        "classes": "",
+        "text": "",  
+        "name": "",  
+        "type": "button",  
+        "aria_label": "",  
+        "data_testid": "edit-billing",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },  
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='edit-billing']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='edit-billing']"            
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Edit Shipping"  
+    },
+    {  
+        "tag_name": "button",  
+        "id": "",  
+        "classes": "",  
+        "text": "Continue",  
+        "name": "",  
+        "type": "button",  
+        "aria_label": "",  
+        "data_testid": "printer-enroll-continue-button",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": false,  
+        "location": { "x": 0, "y": 0 },  
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [  
+            "[data-testid='printer-enroll-continue-button']"
+        ],  
+        "xpath_selectors": [  
+            "//*[@data-testid='printer-enroll-continue-button']",  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[2]/button"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": true,  
+        "label_text": "Continue"  
+        },
+        {  
+            "tag_name": "button",  
+            "id": "",  
+            "classes": "",  
+            "text": "Add Billing",  
+            "name": "",  
+            "type": "button",  
+            "aria_label": "",  
+            "data_testid": "add-billing",  
+            "data_test": "",  
+            "data_cy": "",  
+            "data_qa": "",  
+            "href": "",  
+            "value": "",  
+            "placeholder": "",  
+            "is_displayed": true,  
+            "is_enabled": true,  
+            "location": { "x": 0, "y": 0 },  
+            "size": { "height": 0, "width": 0 },  
+            "css_selectors": [  
+                "[data-testid='add-billing']"
+            ],  
+            "xpath_selectors": [  
+                "//*[@data-testid='add-billing']",  
+                "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[3]/div/div[2]/div[2]/button"  
+            ],  
+            "auth_priority": false,  
+            "form_priority": true,  
+            "label_text": "Add Billing"  
+        },
+        {  
+            "tag_name": "a",  
+            "id": "",  
+            "classes": "",  
+            "text": "Enter promo or PIN code",  
+            "name": "",  
+            "type": "",  
+            "aria_label": "",  
+            "data_testid": "apply-promotion-button",  
+            "data_test": "",  
+            "data_cy": "",  
+            "data_qa": "",  
+            "href": "",  
+            "value": "",  
+            "placeholder": "",  
+            "is_displayed": true,  
+            "is_enabled": true,  
+            "location": { "x": 0, "y": 0 },  
+            "size": { "height": 0, "width": 0 },  
+            "css_selectors": [  
+                "[data-testid='apply-promotion-button']"
+            ],  
+            "xpath_selectors": [  
+                "//*[@data-testid='apply-promotion-button']",  
+                "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[3]/div/a"  
+            ],  
+            "auth_priority": false,  
+            "form_priority": true,  
+            "label_text": "Enter promo or PIN code"  
+        },
+        {  
+        "tag_name": "div",  
+        "id": "",  
+        "classes": "",  
+        "text": "",  
+        "name": "",  
+        "type": "",  
+        "aria_label": "",  
+        "data_testid": "",  
+        "data_analyticsid": "billing-card-tooltip",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": { "x": 0, "y": 0 },  
+        "size": { "height": 0, "width": 0 },  
+        "css_selectors": [              
+        ],  
+        "xpath_selectors": [  
+            "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[1]/div[3]/div/div[1]/div[2]"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": false,  
+        "label_text": "Billing card tooltip"  
+        },          
+        {  
+            "tag_name": "a",  
+            "id": "",  
+            "classes": "",  
+            "text": "Claim Offer",  
+            "name": "",  
+            "type": "",  
+            "aria_label": "",  
+            "data_testid": "apply-ek-code-button",  
+            "data_test": "",  
+            "data_cy": "",  
+            "data_qa": "",  
+            "href": "",  
+            "value": "",  
+            "placeholder": "",  
+            "is_displayed": true,  
+            "is_enabled": true,  
+            "location": { "x": 0, "y": 0 },  
+            "size": { "height": 0, "width": 0 },  
+            "css_selectors": [  
+                "[data-testid='apply-ek-code-button']"  
+            ],  
+            "xpath_selectors": [  
+                "//*[@data-testid='apply-ek-code-button']",  
+                "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[2]/div[1]/div/div/div[3]/a"  
+            ],  
+            "auth_priority": false,  
+            "form_priority": true,  
+            "label_text": "Claim Offer"  
+        },
+        {  
+            "tag_name": "a",  
+            "id": "",  
+            "classes": "",  
+            "text": "See details",  
+            "name": "",  
+            "type": "",  
+            "aria_label": "",  
+            "data_testid": "",  
+            "data_analyticsid": "BenefitsTooltipLink",  
+            "data_test": "",  
+            "data_cy": "",  
+            "data_qa": "",  
+            "href": "",  
+            "value": "",  
+            "placeholder": "",  
+            "is_displayed": true,  
+            "is_enabled": true,  
+            "location": { "x": 0, "y": 0 },  
+            "size": { "height": 0, "width": 0 },  
+            "css_selectors": [  
+                "[data-analyticsid='BenefitsTooltipLink']"  
+            ],  
+            "xpath_selectors": [  
+                "//*[@data-analyticsid='BenefitsTooltipLink']",  
+                "//*[@id='@jarvis/react-smb-instant-ink-signup']/div/div/div[2]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/a"  
+            ],  
+            "auth_priority": false,  
+            "form_priority": false,  
+            "label_text": "See details"  
+        }                      
+  ]
+}
+
+

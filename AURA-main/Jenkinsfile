@@ -1,0 +1,248 @@
+pipeline {
+  agent any
+
+  environment {
+    IMAGE_NAME   = "aura-env"
+    RESULTS_ROOT = ".aura-results" // per-build outputs on the host
+    HTTP_PROXY   = "http://manual-proxy.us.hpicorp.net:8080"
+    HTTPS_PROXY  = "http://manual-proxy.us.hpicorp.net:8080"
+    NO_PROXY     = "iiqaautomation.auth.hpicorp.net,localhost,127.0.0.1"
+  }
+
+  parameters {
+    string(name: 'FLOW',            defaultValue: '',         description: 'Test flow folder name')
+    choice(name: 'MODE',            choices: ['noop','validate'], description: 'Execution mode')
+    choice(name: 'STACK',           choices: ['stage','pie','production'], description: 'Target stack')
+    choice(name: 'LOCALE',          choices: [
+      'United States','United Kingdom','Canada','France','Germany','Italy','Australia','Singapore',
+      'Austria','Belgium','Bulgaria','Croatia','Cyprus','Czechia','Denmark','Estonia','Finland',
+      'Greece','Hong Kong','Hungary','Ireland','Latvia','Lithuania','Luxembourg','Malta',
+      'Netherlands','New Zealand','Norway','Poland','Portugal','Puerto Rico','Romania','Slovakia',
+      'Slovenia','Spain','Sweden','Switzerland',
+    ], description: 'Select country')
+    string(name: 'LANGUAGE',        defaultValue: '',         description: 'Optional language code')
+    string(name: 'PRINTER_PROFILE', defaultValue: '',         description: 'Optional printer profile')
+    choice(name: 'EASY_ENROLL',     choices: ['', 'yes', 'no'], description: 'Optional easy_enroll filter')
+    choice(name: 'BIZ_MODEL',       choices: ['Flex', 'E2E'], description: 'Business model')
+    choice(name: 'TARGET',          choices: ['web_chrome','web_safari','web_firefox','windows_app','mac_app','android_app','ios_app'], description: 'Target platform')
+    choice(name: 'SIMULATOR_PLATFORM', choices: ['', 'wingotham','macgotham','android','ios','hpxwindows','hpxmac','hpxandroid','hpxios','wingotham-od','macgotham-od','android-od','ios-od','hpxwindows-od','hpxmac-od','hpxandroid-od','hpxios-od'], description: 'Simulator platform for app targets')
+    choice(name: 'PAYMENT_METHOD',  choices: ['', 'credit_card_master','credit_card_master_2_series','credit_card_visa','credit_card_amex','credit_card_discover','direct_debit','direct_debit_2','paypal','google_pay'], description: 'Payment method (defaults to credit_card_master)')
+    choice(name: 'COLLECT_LOGS',    choices: ['', 'har', 'video', 'both'], description: 'Collect HAR / Video / Both')
+    booleanParam(name: 'HEADLESS',  defaultValue: true,  description: 'Run in headless mode')
+    booleanParam(name: 'DEBUG',     defaultValue: false, description: 'Enable debug logging')
+    string(name: 'REQUIREMENTS',    defaultValue: '',    description: 'Optional requirements e.g. [plan_pages:50,hpplus:activate]')
+  }
+
+  stages {
+    stage('Checkout') {
+      steps { checkout scm }
+    }
+
+    stage('Build Docker Image (if not exists)') {
+      steps {
+        script {
+          def exists = sh(script: "docker image inspect ${IMAGE_NAME} > /dev/null 2>&1", returnStatus: true) == 0
+          if (!exists) {
+            echo "Building Docker image..."
+            sh "docker build -t ${IMAGE_NAME} ."
+          } else {
+            echo "Docker image already exists."
+          }
+        }
+      }
+    }
+
+    stage('Run AURA Automation') {
+      environment {
+        GMAIL_REFRESH_TOKEN            = credentials('GMAIL_REFRESH_TOKEN')
+        GMAIL_CLIENT_ID                = credentials('GMAIL_CLIENT_ID')
+        GMAIL_CLIENT_SECRET            = credentials('GMAIL_CLIENT_SECRET')
+        MONGODB_URI                    = credentials('MONGODB_URI')
+        MONGODB_DB_NAME                = credentials('MONGODB_DB_NAME')
+        S3_ACCESS_KEY                  = credentials('S3_ACCESS_KEY')
+        S3_SECRET_KEY                  = credentials('S3_SECRET_KEY')
+        S3_ENDPOINT                    = credentials('S3_ENDPOINT')
+        S3_BUCKET                      = credentials('S3_BUCKET')
+        S3_REGION                      = credentials('S3_REGION')
+        S3_SECURE                      = credentials('S3_SECURE')
+        RAILS_ADMIN_USER               = credentials('RAILS_ADMIN_USER')
+        RAILS_ADMIN_PASSWORD           = credentials('RAILS_ADMIN_PASSWORD')
+        STRATUS_CLIENT_ID              = credentials('STRATUS_CLIENT_ID')
+        UCDE_CLIENT_ID                 = credentials('UCDE_CLIENT_ID')
+        GEMINI_CLIENT_ID               = credentials('GEMINI_CLIENT_ID')
+        PIE_STRATUS_CLIENT_SECRET      = credentials('PIE_STRATUS_CLIENT_SECRET')
+        PIE_UCDE_CLIENT_SECRET         = credentials('PIE_UCDE_CLIENT_SECRET')
+        PIE_GEMINI_CLIENT_SECRET       = credentials('PIE_GEMINI_CLIENT_SECRET')
+        STAGE_STRATUS_CLIENT_SECRET    = credentials('STAGE_STRATUS_CLIENT_SECRET')
+        STAGE_UCDE_CLIENT_SECRET       = credentials('STAGE_UCDE_CLIENT_SECRET')
+        STAGE_GEMINI_CLIENT_SECRET     = credentials('STAGE_GEMINI_CLIENT_SECRET')
+      }
+      steps {
+        script {
+          // per-build results root on host, available to subsequent stages
+          env.RESULTS_DIR = "${env.RESULTS_ROOT}/${env.BUILD_NUMBER}"
+          sh '''#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p "${RESULTS_DIR}/test_flows_exec_results" "${RESULTS_DIR}/logs"
+'''
+
+          // build optional args safely (no extra quotes that break argparse)
+          def opt = []
+          if (params.LANGUAGE?.trim())           opt += "--language '${params.LANGUAGE}'"
+          if (params.PRINTER_PROFILE?.trim())    opt += "--printer_profile '${params.PRINTER_PROFILE}'"
+          if (params.EASY_ENROLL?.trim())        opt += "--easy_enroll '${params.EASY_ENROLL}'"
+          if (params.BIZ_MODEL?.trim())          opt += "--biz_model '${params.BIZ_MODEL}'"
+          if (params.SIMULATOR_PLATFORM?.trim()) opt += "--simulator_platform '${params.SIMULATOR_PLATFORM}'"
+          if (params.PAYMENT_METHOD?.trim())     opt += "--payment_method '${params.PAYMENT_METHOD}'"
+          if (params.COLLECT_LOGS?.trim())       opt += "--collect_logs '${params.COLLECT_LOGS}'"
+          if (params.REQUIREMENTS?.trim())       opt += "--requirements '${params.REQUIREMENTS}'"
+          if (params.HEADLESS)                   opt += "--headless"
+          if (params.DEBUG)                      opt += "--debug"
+          def optionalArgs = opt.join(' ')
+
+          // run container: repo read-only; write only into mounted /work paths
+          def runStatus = sh(
+            script: """#!/usr/bin/env bash
+set -eo pipefail
+uid=\$(id -u); gid=\$(id -g)
+
+docker run --rm --user "\${uid}:\${gid}" \\
+  -v "\$PWD:/src:ro" \\
+  --mount type=bind,source="\$PWD/${env.RESULTS_DIR}/test_flows_exec_results",target=/work/test_flows_exec_results \\
+  --mount type=bind,source="\$PWD/${env.RESULTS_DIR}/logs",target=/work/logs \\
+  -e PYTHONDONTWRITEBYTECODE=1 \\
+  -e HTTP_PROXY="\$HTTP_PROXY" \\
+  -e HTTPS_PROXY="\$HTTPS_PROXY" \\
+  -e NO_PROXY="\$NO_PROXY" \\
+  -e MONGODB_URI="\$MONGODB_URI" \\
+  -e MONGODB_DB_NAME="\$MONGODB_DB_NAME" \\
+  -e S3_ACCESS_KEY="\$S3_ACCESS_KEY" \\
+  -e S3_SECRET_KEY="\$S3_SECRET_KEY" \\
+  -e S3_ENDPOINT="\$S3_ENDPOINT" \\
+  -e S3_BUCKET="\$S3_BUCKET" \\
+  -e S3_REGION="\$S3_REGION" \\
+  -e S3_SECURE="\$S3_SECURE" \\
+  -e GMAIL_REFRESH_TOKEN="\$GMAIL_REFRESH_TOKEN" \\
+  -e GMAIL_CLIENT_ID="\$GMAIL_CLIENT_ID" \\
+  -e GMAIL_CLIENT_SECRET="\$GMAIL_CLIENT_SECRET" \\
+  -e RAILS_ADMIN_USER="\$RAILS_ADMIN_USER" \\
+  -e RAILS_ADMIN_PASSWORD="\$RAILS_ADMIN_PASSWORD" \\
+  -e STRATUS_CLIENT_ID="\$STRATUS_CLIENT_ID" \\
+  -e UCDE_CLIENT_ID="\$UCDE_CLIENT_ID" \\
+  -e GEMINI_CLIENT_ID="\$GEMINI_CLIENT_ID" \\
+  -e PIE_STRATUS_CLIENT_SECRET="\$PIE_STRATUS_CLIENT_SECRET" \\
+  -e PIE_UCDE_CLIENT_SECRET="\$PIE_UCDE_CLIENT_SECRET" \\
+  -e PIE_GEMINI_CLIENT_SECRET="\$PIE_GEMINI_CLIENT_SECRET" \\
+  -e STAGE_STRATUS_CLIENT_SECRET="\$STAGE_STRATUS_CLIENT_SECRET" \\
+  -e STAGE_UCDE_CLIENT_SECRET="\$STAGE_UCDE_CLIENT_SECRET" \\
+  -e STAGE_GEMINI_CLIENT_SECRET="\$STAGE_GEMINI_CLIENT_SECRET" \\
+  ${IMAGE_NAME} bash -eo pipefail -c "
+    set -e
+    mkdir -p /tmp/work
+    cp -a /src/. /tmp/work/ 2>/dev/null || true
+    cd /tmp/work
+    ln -sfn /work/test_flows_exec_results ./test_flows_exec_results
+    ln -sfn /work/logs ./logs
+
+    python3 aura.py \\
+      --flow   '${params.FLOW}' \\
+      --mode   '${params.MODE}' \\
+      --stack  '${params.STACK}' \\
+      --locale '${params.LOCALE}' \\
+      --target '${params.TARGET}' \\
+      ${optionalArgs}
+  "
+""",
+            returnStatus: true
+          )
+
+          if (runStatus != 0) {
+            echo "Flow exited with status ${runStatus}. Will still publish artifacts/HTML and mark the build FAILED."
+            currentBuild.result = 'FAILURE'
+          }
+        }
+      }
+    }
+
+    stage('Package & Archive Results') {
+      steps {
+        script {
+          // 1) Find newest subdir under test_flows_exec_results that has report.html
+          def latestRunDir = sh(
+            script: '''#!/usr/bin/env bash
+set -euo pipefail
+root="${RESULTS_DIR}/test_flows_exec_results"
+if [ -d "$root" ]; then
+  # list newest first; pick the first that contains report.html
+  while IFS= read -r d; do
+    d="${d%/}"
+    if [ -f "$d/report.html" ]; then
+      echo "$d"
+      exit 0
+    fi
+  done < <(ls -1dt "$root"/*/ 2>/dev/null || true)
+fi
+exit 1
+''',
+            returnStdout: true, returnStatus: false
+          ).trim()
+
+          if (!latestRunDir) {
+            echo "No run folder with report.html was found — nothing to archive/publish."
+            return
+          }
+
+          // 2) Archive every artifact from that run
+          archiveArtifacts artifacts: "${latestRunDir}/**", fingerprint: true, allowEmptyArchive: true
+
+          // 3) Build-level HTML: point exactly at the run folder (no globs in reportFiles)
+          publishHTML target: [
+            reportDir:   latestRunDir,
+            reportFiles: 'report.html',
+            reportName:  'AURA Report (This Build)',
+            keepAll:     true,
+            allowMissing: false
+          ]
+
+          // 4) Project-level latest build
+          publishHTML target: [
+            reportDir:   latestRunDir,
+            reportFiles: 'report.html',
+            reportName:  'AURA Report (Last Build)',
+            keepAll:     false,
+            alwaysLinkToLastBuild: true,
+            allowMissing: false
+          ]
+
+          // 5) If success, refresh lastSuccessful
+          if (currentBuild.currentResult == null || currentBuild.currentResult == 'SUCCESS') {
+            sh """#!/usr/bin/env bash
+set -euo pipefail
+rm -rf .aura-results/lastSuccessful
+mkdir -p .aura-results/lastSuccessful
+rsync -a --delete '${latestRunDir}/' '.aura-results/lastSuccessful/'
+"""
+          }
+
+          // 6) Project-level last successful (only if exists)
+          if (fileExists('.aura-results/lastSuccessful/report.html')) {
+            publishHTML target: [
+              reportDir:   '.aura-results/lastSuccessful',
+              reportFiles: 'report.html',
+              reportName:  'AURA Report (Last Successful)',
+              keepAll:     false,
+              allowMissing:false
+            ]
+          } else {
+            echo 'No lastSuccessful report yet.'
+          }
+        }
+      }
+    }
+  }
+
+  post {
+    success { echo '✅ Flow executed successfully.' }
+    failure { echo '❌ FLOW failed. Check logs.' }
+  }
+}

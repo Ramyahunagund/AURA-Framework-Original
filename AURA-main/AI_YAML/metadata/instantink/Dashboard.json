@@ -1,0 +1,2082 @@
+{
+  "page_info": {
+    "url": "https://instantink-stage1.hpconnectedstage.com/us/en/l/v2",
+    "title": "HP\u00a0Instant\u00a0Ink \u2013 Ink Monthly Subscription | HP Official Site",
+    "timestamp": "2025-08-17 00:25:20.799261",
+    "capture_path": "./dom\\20250817_002459"
+  },
+  "interactive_elements": [
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Account Dashboard",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[1]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "HP Instant Ink",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/a",
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/a/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Overview",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[1]/a",
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[1]/a/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },       
+    {  
+      "tag_name": "button",  
+      "id": "",  
+      "classes": "",  
+      "text": "Redeem Promo or PIN Code",  
+      "name": "",  
+      "type": "",  
+      "aria_label": "",  
+      "data_testid": "redeem-new-offer-button",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": null,  
+        "width": null  
+      },  
+      "css_selectors": [  
+        "[id=\"planDetailsColumn__plan-details-column___19Tb8\"] > div:nth-child(9) > div:nth-child(1) > div > button.specialOfferBalance__redeem-new-offer-button___2NdLs"  
+      ],  
+      "xpath_selectors": [  
+        "//*[@data-testid=\"redeem-new-offer-button\"]"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false,  
+      "label_text": ""  
+    }, 
+    {  
+      "tag_name": "a",  
+      "id": "",  
+      "classes": "",  
+      "text": "Transfer Subscription to Another Printer",  
+      "name": "",  
+      "type": "",  
+      "aria_label": "",  
+      "data_testid": "simplified-printer-replacement-button",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "#",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": null,  
+        "width": null  
+      },  
+      "css_selectors": [  
+        "[id=\"planDetailsColumn__plan-details-column___19Tb8\"] > div:nth-child(9) > div:nth-child(2) > a.planDetailsColumn__change-plan-link___2v6bB"  
+      ],  
+      "xpath_selectors": [  
+        "//*[@data-testid=\"simplified-printer-replacement-button\"]"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false,  
+      "label_text": ""  
+    },
+    {  
+      "tag_name": "button",  
+      "id": "cancel-enrollment-link",  
+      "classes": "",  
+      "text": "Cancel Instant Ink",  
+      "name": "",  
+      "type": "",  
+      "aria_label": "",  
+      "data_testid": "cancel-your-plan",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": null,  
+        "width": null  
+      },  
+      "css_selectors": [  
+        "#cancel-enrollment-link"  
+      ],
+      "xpath_selectors": [  
+        "//*[@id='cancel-enrollment-link']", 
+        "//*[@id=\"cancel-enrollment-link\"]",     
+        "//button[@data-testid='cancel-your-plan']",   
+        "//button[@data-tracking='cancel_enrollment']",   
+        "//button[normalize-space(text())='Cancel Instant Ink']",   
+        "//button[contains(normalize-space(text()), 'Cancel Instant Ink')]",   
+        "//*[@class='cancelEnrollmentLink__cancel-link___RjCFS' and text()='Cancel Instant Ink']",  
+        "//button[@id='cancel-enrollment-link' and contains(text(), 'Cancel Instant Ink')]",  
+        "//button[contains(@class, 'cancelEnrollmentLink__cancel-link') and contains(text(), 'Cancel Instant Ink')]"  
+      ],      
+      "auth_priority": false,  
+      "form_priority": false,  
+      "label_text": ""  
+    },     
+    {  
+      "tag_name": "button",  
+      "id": "",  
+      "classes": "",  
+      "text": "Cancel Paper Add-on",  
+      "name": "",  
+      "type": "",  
+      "aria_label": "",  
+      "data_testid": "legal-remove-paper-link",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "#",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": null,  
+        "width": null  
+      },  
+      "css_selectors": [  
+        "#planDetailsColumn__plan-details-column___19Tb8 > div:nth-child(9) > div:nth-child(3) > div > div.planDetailsColumn__cancel-paper-section___2ubQx > button.planDetailsColumn__cancel-paper-button___GfcDy"  
+      ],  
+      "xpath_selectors": [  
+        "//*[@data-testid='legal-remove-paper-link']",  
+        "//*[@class='planDetailsColumn__cancel-paper-button___GfcDy' and text()='Cancel Paper Add-on']",  
+        "//button[contains(@class, 'planDetailsColumn__cancel-paper-button') and normalize-space(text())='Cancel Paper Add-on']",  
+        "//button[contains(@class, 'planDetailsColumn__cancel-paper-button') and contains(normalize-space(text()), 'Cancel Paper Add-on')]",  
+        "//*[@id='planDetailsColumn__plan-details-column___19Tb8']/div[4]/div[3]/div/div[2]/button"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false,  
+      "label_text": ""  
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Pause Instant Ink",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "pause-ii-plan-link-update-plan",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [        
+        "//*[@id=\"planDetailsColumn__plan-details-column___19Tb8\"]/div[4]/div[2]/button"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""        
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Keep Instant Ink",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "keep-instant-ink-subscription",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "data_linkid": "ii_final_cancellation_option",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"dashboard-app\"]/div[1]/div/div/div/div/div[1]/div[1]/div[2]/button[2]"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": ""
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Confirm Cancellation",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "confirm-cancellation",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "data_linkid": "ii_final_cancellation_option",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"dashboard-app\"]/div[1]/div/div/div/div/div[1]/div[1]/div[2]/button[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Printer Details",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "printer-details-link",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "data_linkid": "ii_subscription_status",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "#printer-details > a"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"printer-details\"]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "View Print History",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "view-print-history",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "data_linkid": "",
+      "data_tracking": "print_history_link_from_status",
+      "href": "/us/en/print_plans/account_history",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "sc-hmdomO hOWhMV",
+      "text": "Frequently Asked Questions",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "#printHistory__print-history___ba0N0 > div.printHistory__columnA___2qp7A > div.printHistory__faq-section-container___20du8.printHistory__faq-section-padding___Esa-5 > div > div > div.sc-hmdomO.hOWhMV",
+        "div.sc-hmdomO.hOWhMV"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"printHistory__print-history___ba0N0\"]/div[1]/div[5]/div/div/div[1]",
+        "//div[@class='sc-hmdomO hOWhMV' and text()='Frequently Asked Questions']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "How are pages recorded?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//div[normalize-space(.)=\"How are pages recorded?\"]",
+        "//div[contains(@class,\"sc-bmzYkS\") and normalize-space(.)=\"How are pages recorded?\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "What does my monthly payment include?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "div[data-testid=\"accordion\"] > div:nth-child(2) > h3 > button"
+      ],
+      "xpath_selectors": [        
+        "//div[normalize-space(.)=\"What does my monthly payment include?\"]",
+        "//div[contains(@class,\"sc-bmzYkS\") and normalize-space(.)=\"What does my monthly payment include?\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "What counts as a printed page?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//div[normalize-space(.)=\"What counts as a printed page?\"]",
+        "//div[contains(@class,\"sc-bmzYkS\") and normalize-space(.)=\"What counts as a printed page?\"]"       
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "What are Additional Pages and Rollover Pages?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//div[normalize-space(.)=\"What are Additional Pages and Rollover Pages?\"]",
+        "//div[contains(@class,\"sc-bmzYkS\") and normalize-space(.)=\"What are Additional Pages and Rollover Pages?\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Shipping & Billing",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "target": "_self",
+      "tabindex": "0",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[4]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Account",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "target": "_self",
+      "tabindex": "0",
+      "data_selected": "true",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "contains_svg": true,
+      "contains_nested_elements": true,
+      "nested_elements": [
+        {
+          "tag_name": "div",
+          "classes": "",
+          "contains_svg": true,
+          "svg_data_testid": "jarvis-react-consumer-layout__side-menu-item-icon"
+        },
+        {
+          "tag_name": "span",
+          "classes": "vn-side-menu__item-col-label",
+          "text": "Account"
+        },
+        {
+          "tag_name": "button",
+          "classes": "",
+          "type": "button",
+          "aria_disabled": "false",
+          "aria_label": "Action Button",
+          "tabindex": "-1",
+          "contains_svg": true,
+          "svg_states": ["vn-icon-inactive", "vn-icon-active"]
+        }
+      ],
+      "is_displayed": true,
+      "is_enabled": true,
+      "is_selected": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//li[@data-testid=\"jarvis-react-consumer-layout__side-menu-item-Account\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+{
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Shipment Tracking",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "target": "_self",
+      "tabindex": "0",
+      "data_selected": "true",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "contains_svg": false,
+      "contains_nested_elements": true,
+      "nested_elements": [
+        {
+          "tag_name": "span",
+          "classes": "vn-side-menu__item-col-label",
+          "text": "Shipment Tracking"
+        }
+      ],
+      "is_displayed": true,
+      "is_enabled": true,
+      "is_selected": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[4]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Print and Payment History",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "target": "_self",
+      "tabindex": "0",
+      "data_selected": "false",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "contains_svg": false,
+      "contains_nested_elements": true,
+      "nested_elements": [
+        {
+          "tag_name": "span",
+          "classes": "vn-side-menu__item-col-label",
+          "text": "Print and Payment History"
+        }
+      ],
+      "is_displayed": true,
+      "is_enabled": true,
+      "is_selected": false,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[3]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Update Plan",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "target": "_self",
+      "tabindex": "0",
+      "data_selected": "false",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "contains_svg": false,
+      "contains_nested_elements": true,
+      "nested_elements": [
+        {
+          "tag_name": "span",
+          "classes": "vn-side-menu__item-col-label",
+          "text": "Update Plan"
+        }
+      ],
+      "is_displayed": true,
+      "is_enabled": true,
+      "is_selected": false,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[2]/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "input",
+      "id": "1",
+      "classes": "",
+      "text": "I do not print enough to make it worthwhile",
+      "name": "cancellation-feedback-radio",
+      "type": "radio",
+      "aria_label": "",
+      "data_testid": "i-do-not-print-enough-to-make-it-worthwhile",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "i-do-not-print-enough-to-make-it-worthwhile",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "#1",
+        "input[data-testid='i-do-not-print-enough-to-make-it-worthwhile']",
+        "input[name='cancellation-feedback-radio'][value='i-do-not-print-enough-to-make-it-worthwhile']"
+      ],
+      "xpath_selectors": [
+        "//*[@id='1']",
+        "//input[@data-testid='i-do-not-print-enough-to-make-it-worthwhile']",
+        "//input[@name='cancellation-feedback-radio' and @value='i-do-not-print-enough-to-make-it-worthwhile']"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": "I do not print enough to make it worthwhile"
+  },
+  {
+    "tag_name": "a",
+    "id": "",
+    "classes": "",
+    "text": "Enroll or replace a printer",
+    "name": "",
+    "type": "",
+    "aria_label": "",
+    "data_testid": "enroll-printer-link",
+    "data_test": "",
+    "data_cy": "",
+    "data_qa": "",
+    "href": "",
+    "value": "",
+    "placeholder": "",
+    "is_displayed": true,
+    "is_enabled": true,
+    "location": {
+      "x": null,
+      "y": null
+    },
+    "size": {
+      "height": null,
+      "width": null
+    },
+    "css_selectors": [
+      "#rebranded-home-page > div.home__headerContainer___1BGbl > div.pageHeader__container___83KR9 > div.pageHeader__right-col-content___GSepC > div.pageHeader__enroll-link-container___M_FZx > div.pageHeader__enroll-replace-printer___j6kLm > a"
+    ],
+    "xpath_selectors": [
+      "//*[@id=\"rebranded-home-page\"]/div[1]/div[1]/div[2]/div[2]/div[2]/a"
+    ],
+    "auth_priority": false,
+    "form_priority": false,
+    "label_text": "",
+    "custom_attributes": {
+      "target": "_blank",
+      "data-linkid": "ii_enroll_replace",
+      "style": "font-size: 16px;"
+    }
+   },
+    {
+      "tag_name": "p",
+      "id": "",
+      "classes": "",
+      "text": "Dismiss",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "emergency_banner_dismiss",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "p[data-testid='emergency_banner_dismiss']",
+        "#rebranded-home-page p[data-testid='emergency_banner_dismiss']"
+      ],
+      "xpath_selectors": [
+        "//p[@data-testid='emergency_banner_dismiss']",
+        "//*[@id='rebranded-home-page']//p[@data-testid='emergency_banner_dismiss']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Emergency banner dismiss button"
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "HP Connected Account",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "hp-connected-account",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "/us/en/my-printers",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+        "#floating-ui-q737106 > div > div.printerDetailsModalNewVisId__left-col___2kzn4 > div > a"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"floating-ui-q737106\"]/div/div[1]/div/a"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {
+        "data-linkid": "ii_subscription_status"
+      }
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Why was I charged but did not get a shipment?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+        "div[data-testid=\"accordion\"] > div:nth-child(1) > h3 > button"
+      ],
+      "xpath_selectors": [
+        "//div[@data-testid=\"accordion\"]//button[@aria-labelledby=\"floating-ui-kud125\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {
+        "aria-labelledby": "floating-ui-kud125",
+        "aria-controls": "item-0",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "What does my monthly payment include?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+        "div[data-testid=\"accordion\"] > div:nth-child(2) > h3 > button"
+      ],
+      "xpath_selectors": [
+        "//div[@data-testid=\"accordion\"]//button[@aria-labelledby=\"floating-ui-irww27\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {
+        "aria-labelledby": "floating-ui-irww27",
+        "aria-controls": "item-1",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Did Instant Ink send me the wrong cartridges?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+        "div[data-testid=\"accordion\"] > div:nth-child(3) > h3 > button"
+      ],
+      "xpath_selectors": [
+        "//div[@data-testid=\"accordion\"]//button[@aria-labelledby=\"floating-ui-zt5i29\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {
+        "aria-labelledby": "floating-ui-zt5i29",
+        "aria-controls": "item-2",
+        "aria-expanded": "false"
+      }
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Subscriptions",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Subscriptions",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Orders",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Orders",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[2]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Statements",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Statements",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[3]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Shipping & Billing",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Shipping & Billing",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[4]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Profile",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Profile",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[5]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Users",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Users",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[6]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "li",
+      "id": "",
+      "classes": "",
+      "text": "Notifications",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__side-menu-item-Notifications",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": null,
+        "y": null
+      },
+      "size": {
+        "height": null,
+        "width": null
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[5]/div/div/div/ul/li[7]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "",
+      "custom_attributes": {}
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Start Chat",
+      "name": "",
+      "type": "submit",
+      "aria_label": "Start Chat",
+      "data_testid": "modal-start-chat-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [        
+      ],
+      "xpath_selectors": [
+        "/html/body/div[7]/div/div/div/div/div[2]/button[2]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "span",
+      "id": "",
+      "classes": "",
+      "text": "Special offers",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "#promoCard__promo-card-new-visid___2x4gH > div > div > div > ul > li > div > div > div.referAFriendPromoContentNewVisId__raf-content-title___3B4fF > span"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"promoCard__promo-card-new-visid___2x4gH\"]/div/div/div/ul/li/div/div/div[1]/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "Plan Details",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "plan-details-container",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"change-plan\"]/div[2]/div/div[6]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    },
+    {
+      "tag_name": "svg",
+      "id": "",
+      "classes": "",
+      "text": "",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "emergency_banner_collapse_expand",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "#rebranded-home-page > div.home__grid___tngw4.home__defaultGrid___1hXSQ > div.home__statusCard___Wxz05 > div.home__emergencyBanner___3WYPd > div > div > div > div:nth-child(1) > div > div.sc-iHGNWf.cepCRw > div > div.sc-kOPcWz.hGtHkB > div > svg"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"rebranded-home-page\"]/div[2]/div[1]/div[1]/div/div/div/div[1]/div/div[1]/div/div[2]/div/svg"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Dismiss Arrow"
+    },
+    {
+      "tag_name": "div",
+      "id": "",
+      "classes": "",
+      "text": "Ink Cartridge Status",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "ink-status-card",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "div[data-testid='ink-status-card']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='ink-status-card']",
+        "//div[@data-testid=\"ink-status-card\"]//h6[normalize-space(.)=\"Ink Cartridge Status\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Ink Cartridge Status"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Continue",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "continue-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='continue-button']",
+        "button[data-analyticsid='continue-add-online-printer']",
+        "button[data-testid='consumer-plans-select-plans']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='continue-button']",
+        "//*[@data-analyticsid='continue-add-online-printer']",
+        "//*[@data-testid='consumer-plans-select-plans']", 
+        "//*[@id='@jarvis/react-billing']/div/div/div/div/div[3]/button[2]",  
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div[2]/div/div/div/div[2]/div/div[2]/button",
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div[2]/div/div/div/div/div/div[2]/div[5]/button",
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div[2]/div/div/div/div/div/div[2]/div[4]/button"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Continue"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Select Monthly",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "i_ink-plan-type-card-select-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='i_ink-plan-type-card-select-button']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='i_ink-plan-type-card-select-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Select Monthly"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Select Pay As You Print",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "i_pay_as_you_print-plan-type-card-select-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='i_pay_as_you_print-plan-type-card-select-button']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='i_pay_as_you_print-plan-type-card-select-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Select Pay As You Print"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "HP Checkout",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "choose-HP-checkout",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='choose-HP-checkout']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='choose-HP-checkout']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "HP Checkout"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Add Shipping",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "add-shipping",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='add-shipping']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='add-shipping']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Add Shipping"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Add Billing",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "add-billing",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": false,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='add-billing']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='add-billing']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Add Billing"
+    },
+    {
+      "tag_name": "input",
+      "id": "street1",
+      "classes": "",
+      "text": "",
+      "name": "address1",
+      "type": "text",
+      "aria_label": "",
+      "data_testid": "street1",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "input[data-testid='street1']",
+        "#street1"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='street1']",
+        "//*[@id='street1']"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": "Street Address"
+    },
+    {
+      "tag_name": "input",
+      "id": "phoneNumberSmall",
+      "classes": "",
+      "text": "",
+      "name": "phoneNumberSmall",
+      "type": "text",
+      "aria_label": "",
+      "data_testid": "phoneNumberSmall",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "input[data-testid='phoneNumberSmall']",
+        "#phoneNumberSmall"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='phoneNumberSmall']",
+        "//*[@id='phoneNumberSmall']"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": "Phone Number"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Save",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "save-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='save-button']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='save-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": ""
+    },
+    {
+      "tag_name": "input",
+      "id": "city",
+      "classes": "",
+      "text": "City",
+      "name": "city",
+      "type": "text",
+      "aria_label": "",
+      "data_testid": "city",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {"x": 0, "y": 0},
+      "size": {"height": 0, "width": 0},
+      "css_selectors": ["input[data-testid='city']", "#city"],
+      "xpath_selectors": ["//*[@data-testid='city']", "//*[@id='city']"],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": ""
+    },
+    {
+      "tag_name": "input",
+      "id": "zip-code",
+      "classes": "",
+      "text": "Zip Code",
+      "name": "zipCode",
+      "type": "text",
+      "aria_label": "",
+      "data_testid": "zip-code",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {"x": 0, "y": 0},
+      "size": {"height": 0, "width": 0},
+      "css_selectors": ["input[data-testid='zip-code']", "#zip-code"],
+      "xpath_selectors": ["//*[@data-testid='zip-code']", "//*[@id='zip-code']"],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": ""
+    },
+    {
+      "tag_name": "div",
+      "id": "state",
+      "classes": "",
+      "text": "",
+      "name": "state",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "state",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {"x": 0, "y": 0},
+      "size": {"height": 0, "width": 0},
+      "css_selectors": ["div[data-testid='state']", "#state"],
+      "xpath_selectors": ["//*[@data-testid='state']", "//*[@id='state']"],
+      "auth_priority": false,
+      "form_priority": true,
+      "label_text": "State"
+    },
+    {
+          "tag_name": "li",
+          "id": "",
+          "classes": "",
+          "text": "",
+          "name": "",
+          "type": "",
+          "aria_label": "",
+          "data_testid": "",
+          "data_test": "",
+          "data_cy": "",
+          "data_qa": "",
+          "href": "",
+          "value": "",
+          "placeholder": "",
+          "is_displayed": true,
+          "is_enabled": true,
+          "location": {"x": 0, "y": 0},
+          "size": {"height": 0, "width": 0},
+          "css_selectors": [],
+          "xpath_selectors": [
+            "//li[@role='option' and normalize-space()='California']",
+            "//li[normalize-space()='California']"
+          ],
+          "auth_priority": false,
+          "form_priority": true,
+          "label_text": "California"
+      },      
+      {
+      "tag_name": "radio-button",
+      "id": "",
+      "classes": "",
+      "text": "",
+      "name": "",
+      "type": "radio-button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": { "x": 0, "y": 0 },
+      "size": { "height": 0, "width": 0 },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div[2]/div/div/div/div[2]/div/div[1]/div/div/div/div/div/div/div[1]/div/div/div/div[1]/div/label/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "enroll radio button"
+      },
+      {  
+        "tag_name": "span",  
+        "id": "",  
+        "classes": "",  
+        "text": "Enroll Checkbox",
+        "name": "",  
+        "type": "",  
+        "aria_label": "true",  
+        "data_testid": "",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": {  
+          "x": 0,  
+          "y": 0  
+        },  
+        "size": {  
+          "height": 0,  
+          "width": 0  
+        },  
+        "css_selectors": [  
+          ""  
+        ],  
+        "xpath_selectors": [  
+          "/html/body/div[12]/div/div/div/div/div/div[1]/div[2]/label/span"  
+        ],  
+        "auth_priority": false,  
+        "form_priority": false,  
+        "label_text": "terms-of-service"  
+      },
+{  
+        "tag_name": "button",  
+        "id": "",  
+        "classes": "",  
+        "text": "Enroll",
+        "name": "",  
+        "type": "",  
+        "aria_label": "true",  
+        "data_testid": "",  
+        "data_test": "",  
+        "data_cy": "",  
+        "data_qa": "",  
+        "href": "",  
+        "value": "",  
+        "placeholder": "",  
+        "is_displayed": true,  
+        "is_enabled": true,  
+        "location": {  
+          "x": 0,  
+          "y": 0  
+        },  
+        "size": {  
+          "height": 0,  
+          "width": 0  
+        },  
+        "css_selectors": [  
+          ""  
+        ],  
+        "xpath_selectors": [  
+          "/html/body/div[12]/div/div/div/div/div/div[2]/button"
+        ],  
+        "auth_priority": false,  
+        "form_priority": false,  
+        "label_text": "Enroll"  
+      }                           
+  ]
+}
+
+

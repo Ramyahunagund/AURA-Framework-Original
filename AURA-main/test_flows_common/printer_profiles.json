@@ -1,0 +1,187 @@
+{
+  "manhattan_yeti": {
+    "skus": {
+      "NA": [
+        { "sku": "1G5L3A", "easy_enroll": true, "supplyvariant": "IIC" },
+        { "sku": "1G5M0A", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "EU": [
+        { "sku": "226Y0B", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "APJ": [
+        { "sku": "226Y2D", "easy_enroll": true, "supplyvariant": "IIC" }
+      ]
+    }
+  },
+  "vasari_yeti": {
+    "skus": {
+      "NA": [
+        { "sku": "223R1A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "223R4B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "223R6A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "novelli": {
+    "skus": {
+      "NA": [
+        { "sku": "1W2Y8A", "easy_enroll": true, "supplyvariant": "IPH" },
+        { "sku": "1W2Y8A", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "2H2P6B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "2H2Q2D", "easy_enroll": false, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "tassel": {
+    "skus": {
+      "NA": [
+        { "sku": "588S6A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "588S0B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "588K6A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "marconi": {
+    "skus": {
+      "NA": [
+        { "sku": "404M0A", "easy_enroll": true, "supplyvariant": "IIC" }
+      ],
+      "EU": [
+        { "sku": "404M5B", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "APJ": [
+        { "sku": "404N0B", "easy_enroll": true, "supplyvariant": "IIC" }
+      ]
+    }
+  },
+  "moreto": {
+    "skus": {
+      "NA": [
+        { "sku": "40Q51A", "easy_enroll": true, "supplyvariant": "IIC" }
+      ],
+      "EU": [
+        { "sku": "40Q47B", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "APJ": [
+        { "sku": "40Q48B", "easy_enroll": true, "supplyvariant": "IIC" }
+      ]
+    }
+  },
+  "victoria": {
+    "skus": {
+      "NA": [
+        { "sku": "714N5A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "714N9B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "714P2A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "taccolaplusyeti": {
+    "skus": {
+      "NA": [
+        { "sku": "26Q90A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "26Q91B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "26Q94A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "manhattan": {
+    "skus": {
+      "NA": [
+        { "sku": "1MR66A", "easy_enroll": true, "supplyvariant": "IIC" }
+      ],
+      "EU": [
+        { "sku": "1MR78B", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "APJ": [
+        { "sku": "1MR80D", "easy_enroll": true, "supplyvariant": "IIC" }
+      ]
+    }
+  },
+  "palermo": {
+    "skus": {
+      "NA": [
+        { "sku": "K7R96A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "K7G21B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "K7G19D", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "verona": {
+    "skus": {
+      "NA": [
+        { "sku": "M2U75A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "M2U84B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "Z4B27A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "infinitypremium": {
+    "skus": {
+      "NA": [
+        { "sku": "3DP65A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "3DP65B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "3DP65D", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "taccolaplus": {
+    "skus": {
+      "NA": [
+        { "sku": "3XV13A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ],
+      "EU": [
+        { "sku": "3XV14B", "easy_enroll": false, "supplyvariant": "IPH" }
+      ],
+      "APJ": [
+        { "sku": "3XV15A", "easy_enroll": true, "supplyvariant": "IPH" }
+      ]
+    }
+  },
+  "malbec_yeti": {
+    "skus": {
+      "NA": [
+        { "sku": "1L0J0A", "easy_enroll": true, "supplyvariant": "IIC" },
+        { "sku": "1K7K7A", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "EU": [
+        { "sku": "1K7K7A", "easy_enroll": false, "supplyvariant": "IIC" }
+      ],
+      "APJ": [
+        { "sku": "1K7K3A", "easy_enroll": true, "supplyvariant": "IIC" }
+      ]
+    }
+  }
+}

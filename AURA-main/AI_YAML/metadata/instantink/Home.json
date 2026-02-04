@@ -1,0 +1,1527 @@
+{
+  "page_info": {
+    "url": "https://instantink-stage1.hpconnectedstage.com/us/en/l/v2",
+    "title": "HP\u00a0Instant\u00a0Ink \u2013 Ink Monthly Subscription | HP Official Site",
+    "timestamp": "2025-08-17 00:25:20.799261",
+    "capture_path": "./dom\\20250817_002459"
+  },
+  "interactive_elements": [
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Account Dashboard",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[1]/a",
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[1]/a/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "HP Instant Ink",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/a",
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/a/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Overview",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[1]/a",
+        "//*[@id=\"@jarvis/react-consumer-layout\"]/div/header/div[1]/div/div[3]/nav/ul/li[2]/div/div/div/ul/li[1]/a/span"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },    
+    {
+      "tag_name": "button",
+      "id": "cancel-enrollment-link",
+      "classes": "",
+      "text": "Cancel Instant Ink",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "cancel-your-plan",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "#cancel-enrollment-link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"cancel-enrollment-link\"]",
+        "//*[@id='cancel-enrollment-link']",
+        "//button[contains(normalize-space(text()), 'Cancel Instant Ink')]",
+        "//*[normalize-space(text())='Cancel Instant Ink']",
+        "//button[normalize-space(text())='Cancel Instant Ink']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {  
+      "tag_name": "button",  
+      "id": "",  
+      "classes": "",  
+      "text": "Confirm Cancellation",  
+      "name": "",  
+      "type": "button",  
+      "aria_label": "",  
+      "data_testid": "confirm-cancellation",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": 950,  
+        "y": 235  
+      },  
+      "size": {  
+        "height": 42,  
+        "width": 180  
+      },  
+      "css_selectors": [  
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"dashboard-app\"]/div[1]/div/div/div/div/div[1]/div[1]/div[3]/button[1]"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false  
+    },  
+    {  
+      "tag_name": "button",  
+      "id": "",  
+      "classes": "",  
+      "text": "Keep Instant Ink",  
+      "name": "",  
+      "type": "button",  
+      "aria_label": "",  
+      "data_testid": "keep-instant-ink-subscription",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": 950,  
+        "y": 235  
+      },  
+      "size": {  
+        "height": 42,  
+        "width": 135  
+      },  
+      "css_selectors": [  
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"dashboard-app\"]/div[1]/div/div/div/div/div[1]/div[1]/div[3]/button[2]"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false  
+    }, 
+    {  
+      "tag_name": "button",  
+      "id": "",  
+      "classes": "",  
+      "text": "Keep Subscription",  
+      "name": "",  
+      "type": "button",  
+      "aria_label": "",  
+      "data_testid": "",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": 950,  
+        "y": 235  
+      },  
+      "size": {  
+        "height": 42,  
+        "width": 135  
+      },  
+      "css_selectors": [
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"rebranded-home-page\"]/div[1]/div[1]/div[3]/div[1]/div/div/div/div[2]/button"  
+      ],  
+      "auth_priority": false,  
+      "form_priority": false  
+    },     
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Close",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "close-pause-plan-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [        
+        "//*[@id=\"floating-ui-hrc392\"]/div/div[4]/button[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },  
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "X",
+      "name": "",
+      "type": "submit",
+      "aria_label": "Close modal",
+      "data_testid": "close-pause-plan-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [        
+        "//*[@id=\"floating-ui-f87s90\"]/button/span/svg[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },                 
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Select Monthly",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "i_ink-plan-type-card-select-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"plan-type-selector-content-container-identifier\"]/div[1]/div[2]/div[2]/button"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "onetrust-accept-btn-handler",
+      "classes": "",
+      "text": "Next",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "next-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "#onetrust-accept-btn-handler"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div/div/div/div/div/div[2]/div/button[1]",
+        "//*[@id=\"@jarvis/react-smb-instant-ink-signup\"]/div/div/div/div/div/div/div/div[2]/div/button[2]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Accessibility",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "accessibility",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hp.com/us-en/hp-information/accessibility-aging.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1109,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 92
+      },
+      "css_selectors": [
+        "[data-testid='accessibility']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[5]/a[1]",
+        "//a[contains(normalize-space(text()), 'Accessibility')]",
+        "//*[normalize-space(text())='Accessibility']",
+        "//a[normalize-space(text())='Accessibility']",
+        "//*[@data-testid='accessibility']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "onetrust-accept-btn-handler",
+      "classes": "",
+      "text": "I ACCEPT",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "#onetrust-accept-btn-handler"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"onetrust-accept-btn-handler\"]",
+        "//button[contains(normalize-space(text()), 'I ACCEPT')]",
+        "//*[normalize-space(text())='I ACCEPT']",
+        "//button[normalize-space(text())='I ACCEPT']",
+        "//*[@id='onetrust-accept-btn-handler']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "onetrust-pc-btn-handler",
+      "classes": "",
+      "text": "MORE OPTIONS",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 804,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+        "#onetrust-pc-btn-handler"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"onetrust-pc-btn-handler\"]",
+        "//button[contains(normalize-space(text()), 'MORE OPTIONS')]",
+        "//*[normalize-space(text())='MORE OPTIONS']",
+        "//button[normalize-space(text())='MORE OPTIONS']",
+        "//*[@id='onetrust-pc-btn-handler']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon",
+      "text": "",
+      "name": "",
+      "type": "submit",
+      "aria_label": "Close",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1300,
+        "y": 99
+      },
+      "size": {
+        "height": 44,
+        "width": 44
+      },
+      "css_selectors": [
+        "[aria-label='Close']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"onetrust-close-btn-container\"]/button[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "How it works",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 246,
+        "y": 32
+      },
+      "size": {
+        "height": 24,
+        "width": 90
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"consumerGlobalHeader\"]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'How it works')]",
+        "//a[normalize-space(text())='How it works']",
+        "//*[normalize-space(text())='How it works']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Plans",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 360,
+        "y": 32
+      },
+      "size": {
+        "height": 24,
+        "width": 40
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"consumerGlobalHeader\"]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]",
+        "//*[normalize-space(text())='Plans']",
+        "//a[normalize-space(text())='Plans']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Instant Paper",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 423,
+        "y": 32
+      },
+      "size": {
+        "height": 24,
+        "width": 95
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"consumerGlobalHeader\"]/div[1]/div[1]/div[1]/div[2]/div[3]/a[1]",
+        "//a[contains(normalize-space(text()), 'Instant Paper')]",
+        "//*[normalize-space(text())='Instant Paper']",
+        "//a[normalize-space(text())='Instant Paper']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "FAQs",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 543,
+        "y": 32
+      },
+      "size": {
+        "height": 24,
+        "width": 38
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"consumerGlobalHeader\"]/div[1]/div[1]/div[1]/div[2]/div[4]/a[1]",
+        "//*[normalize-space(text())='FAQs']",
+        "//a[normalize-space(text())='FAQs']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Hide",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "emergency_banner_collapse_expand",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 176,
+        "y": 99
+      },
+      "size": {
+        "height": 28,
+        "width": 56
+      },
+      "css_selectors": [
+        "[data-testid='emergency_banner_collapse_expand']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"banner\"]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]",
+        "//*[normalize-space(text())='Hide']",
+        "//a[normalize-space(text())='Hide']",
+        "//*[@data-testid='emergency_banner_collapse_expand']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "banners-module_bannerMessageLink__3IR9U",
+      "text": "View plans",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "origami-banner",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1356,
+        "y": 1124
+      },
+      "size": {
+        "height": 19,
+        "width": 77
+      },
+      "css_selectors": [
+        "[data-testid='origami-banner']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"origami-banner\"]/div[1]/div[2]/div[1]/div[2]/a[1]",
+        "//a[contains(normalize-space(text()), 'View plans')]",
+        "//*[normalize-space(text())='View plans']",
+        "//a[normalize-space(text())='View plans']",
+        "//*[@data-testid='origami-banner']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "phone-content-link",
+      "text": "1-855-785-2777",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "support-phone-link",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "tel:1-855-785-2777",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 959,
+        "y": 1247
+      },
+      "size": {
+        "height": 26,
+        "width": 148
+      },
+      "css_selectors": [
+        ".phone-content-link",
+        "[data-testid='support-phone-link']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"contact-bar\"]/div[2]/a[1]",
+        "//a[contains(normalize-space(text()), '1-855-785-2777')]",
+        "//*[normalize-space(text())='1-855-785-2777']",
+        "//a[normalize-space(text())='1-855-785-2777']",
+        "//*[@data-testid='support-phone-link']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "planSection-module_link__2q5ZV",
+      "text": "Check to see if your HP printer works with Instant Ink ",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 296,
+        "y": 2394
+      },
+      "size": {
+        "height": 19,
+        "width": 387
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"i_ink-plans-tab\"]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'Check to see if your HP printer works with Instant Ink')]",
+        "//*[normalize-space(text())='Check to see if your HP printer works with Instant Ink']",
+        "//a[normalize-space(text())='Check to see if your HP printer works with Instant Ink']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Need more plans information?",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "more-plans-info",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 330,
+        "y": 2424
+      },
+      "size": {
+        "height": 20,
+        "width": 224
+      },
+      "css_selectors": [
+        "[data-testid='more-plans-info']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"i_ink-plans-tab\"]/div[3]/div[1]/div[1]/div[2]/a[1]",
+        "//a[contains(normalize-space(text()), 'Need more plans information?')]",
+        "//*[normalize-space(text())='Need more plans information?']",
+        "//a[normalize-space(text())='Need more plans information?']",
+        "//*[@data-testid='more-plans-info']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "saveMorePaper-module_link__3_BNA",
+      "text": "Learn about pricing and offers",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "learn-more-about-pricing",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://instantink-stage1.hpconnectedstage.com/us/en/l/v2/paper",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 344,
+        "y": 3880
+      },
+      "size": {
+        "height": 20,
+        "width": 214
+      },
+      "css_selectors": [
+        "[data-testid='learn-more-about-pricing']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"save-more-paper-section\"]/div[1]/div[1]/div[1]/div[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'Learn about pricing and offers')]",
+        "//*[normalize-space(text())='Learn about pricing and offers']",
+        "//a[normalize-space(text())='Learn about pricing and offers']",
+        "//*[@data-testid='learn-more-about-pricing']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "www.keypointintelligence.com/HPInstantInk",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "savings-ink-keypoint-link-footnote",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.keypointintelligence.com/HPInstantInk",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1129,
+        "y": 5113
+      },
+      "size": {
+        "height": 14,
+        "width": 244
+      },
+      "css_selectors": [
+        "[data-testid='savings-ink-keypoint-link-footnote']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[2]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'www.keypointintelligence.com/HPInstantInk')]",
+        "//*[normalize-space(text())='www.keypointintelligence.com/HPInstantInk']",
+        "//a[normalize-space(text())='www.keypointintelligence.com/HPInstantInk']",
+        "//*[@data-testid='savings-ink-keypoint-link-footnote']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hp.com/recycle",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "recycle-link-footnote",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hp.com/recycle",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 699,
+        "y": 5169
+      },
+      "size": {
+        "height": 14,
+        "width": 85
+      },
+      "css_selectors": [
+        "[data-testid='recycle-link-footnote']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[4]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'hp.com/recycle')]",
+        "//*[normalize-space(text())='hp.com/recycle']",
+        "//a[normalize-space(text())='hp.com/recycle']",
+        "//*[@data-testid='recycle-link-footnote']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hpinstantink.com/terms",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://instantink-stage1.hpconnectedstage.com/terms",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1001,
+        "y": 5221
+      },
+      "size": {
+        "height": 14,
+        "width": 132
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[5]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'hpinstantink.com/terms')]",
+        "//*[normalize-space(text())='hpinstantink.com/terms']",
+        "//a[normalize-space(text())='hpinstantink.com/terms']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hp.com/go/InkRecycledContent",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "recycled-ink-content-link-footnote",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hp.com/go/inkrecycledcontent",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1252,
+        "y": 5241
+      },
+      "size": {
+        "height": 14,
+        "width": 175
+      },
+      "css_selectors": [
+        "[data-testid='recycled-ink-content-link-footnote']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[6]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'hp.com/go/InkRecycledContent')]",
+        "//*[normalize-space(text())='hp.com/go/InkRecycledContent']",
+        "//a[normalize-space(text())='hp.com/go/InkRecycledContent']",
+        "//*[@data-testid='recycled-ink-content-link-footnote']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hpprintplans.com",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "print-plans-content-link-footnote",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpprintplans.com/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 965,
+        "y": 5377
+      },
+      "size": {
+        "height": 14,
+        "width": 98
+      },
+      "css_selectors": [
+        "[data-testid='print-plans-content-link-footnote']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[8]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'hpprintplans.com')]",
+        "//*[normalize-space(text())='hpprintplans.com']",
+        "//a[normalize-space(text())='hpprintplans.com']",
+        "//*[@data-testid='print-plans-content-link-footnote']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hpinstantink.com",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://hpinstantink.com/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1065,
+        "y": 5461
+      },
+      "size": {
+        "height": 14,
+        "width": 95
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[9]/p[1]/a[1]",
+        "//*[normalize-space(text())='hpinstantink.com']",
+        "//a[normalize-space(text())='hpinstantink.com']",
+        "//a[contains(normalize-space(text()), 'hpinstantink.com')]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hp.com/go/mobileprinting",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hp.com/go/mobileprinting",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1423,
+        "y": 5461
+      },
+      "size": {
+        "height": 14,
+        "width": 143
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[1]/ol[1]/li[9]/p[1]/a[2]",
+        "//a[contains(normalize-space(text()), 'hp.com/go/mobileprinting')]",
+        "//*[normalize-space(text())='hp.com/go/mobileprinting']",
+        "//a[normalize-space(text())='hp.com/go/mobileprinting']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "keypointintelligence.com/HPPaperSavings",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://keypointintelligence.com/hubfs/HP_Samples/HP%20Instant%20Ink%20with%20Paper%20Add-On%20Service%202025.pdf",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1319,
+        "y": 5669
+      },
+      "size": {
+        "height": 14,
+        "width": 237
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"disclaimers\"]/div[2]/ul[1]/li[3]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'keypointintelligence.com/HPPaperSavings')]",
+        "//*[normalize-space(text())='keypointintelligence.com/HPPaperSavings']",
+        "//a[normalize-space(text())='keypointintelligence.com/HPPaperSavings']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "GlobalFooter-module_blueLink__3Sp-e",
+      "text": "HP.com",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "hpDotCom",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/home.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 296,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 55
+      },
+      "css_selectors": [
+        "[data-testid='hpDotCom']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'HP.com')]",
+        "//*[normalize-space(text())='HP.com']",
+        "//a[normalize-space(text())='HP.com']",
+        "//*[@data-testid='hpDotCom']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Privacy Statement",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "privacyStatement",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/privacy/privacy.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 381,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 134
+      },
+      "css_selectors": [
+        "[data-testid='privacyStatement']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'Privacy Statement')]",
+        "//*[normalize-space(text())='Privacy Statement']",
+        "//a[normalize-space(text())='Privacy Statement']",
+        "//*[@data-testid='privacyStatement']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "HP Connected Terms of Use",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "termsOfUse",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpconnected.com/hpctou",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 546,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 202
+      },
+      "css_selectors": [
+        "[data-testid='termsOfUse']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[2]/a[1]",
+        "//a[contains(normalize-space(text()), 'HP Connected Terms of Use')]",
+        "//*[normalize-space(text())='HP Connected Terms of Use']",
+        "//a[normalize-space(text())='HP Connected Terms of Use']",
+        "//*[@data-testid='termsOfUse']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Cookie Settings",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "cookieSettings",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/privacy/use-of-cookies.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 779,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 116
+      },
+      "css_selectors": [
+        "[data-testid='cookieSettings']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[3]/a[1]",
+        "//a[contains(normalize-space(text()), 'Cookie Settings')]",
+        "//*[normalize-space(text())='Cookie Settings']",
+        "//a[normalize-space(text())='Cookie Settings']",
+        "//*[@data-testid='cookieSettings']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Your Privacy Choices",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "privacyChoices",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/privacy/your-privacy-choices.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 926,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 153
+      },
+      "css_selectors": [
+        "[data-testid='privacyChoices']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[4]/a[1]",
+        "//a[contains(normalize-space(text()), 'Your Privacy Choices')]",
+        "//*[normalize-space(text())='Your Privacy Choices']",
+        "//a[normalize-space(text())='Your Privacy Choices']",
+        "//*[@data-testid='privacyChoices']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Instant Ink Terms of Service",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "iiTOS",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://instantink-stage1.hpconnectedstage.com/terms",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1233,
+        "y": 5893
+      },
+      "size": {
+        "height": 21,
+        "width": 201
+      },
+      "css_selectors": [
+        "[data-testid='iiTOS']"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"iiLandingWrapper\"]/div[13]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[6]/a[1]",
+        "//*[normalize-space(text())='Instant Ink Terms of Service']",
+        "//a[normalize-space(text())='Instant Ink Terms of Service']",
+        "//*[@data-testid='iiTOS']",
+        "//a[contains(normalize-space(text()), 'Instant Ink Terms of Service')]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "information",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/privacy/privacy.html?pd4=1#=What_Data_We_Collect",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 901,
+        "y": 169
+      },
+      "size": {
+        "height": 18,
+        "width": 66
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"onetrust-policy-text\"]/p[1]/a[1]",
+        "//*[normalize-space(text())='information']",
+        "//a[normalize-space(text())='information']",
+        "//a[contains(normalize-space(text()), 'information')]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "here",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www8.hp.com/us/en/privacy/use-of-cookies.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1149,
+        "y": 190
+      },
+      "size": {
+        "height": 18,
+        "width": 25
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"onetrust-policy-text\"]/p[1]/a[2]",
+        "//*[normalize-space(text())='here']",
+        "//a[normalize-space(text())='here']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Manage Account",
+      "name": "",
+      "type": "submit",
+      "aria_label": "",
+      "data_testid": "sign-in-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 950,
+        "y": 235
+      },
+      "size": {
+        "height": 42,
+        "width": 135
+      },
+      "css_selectors": [
+      ],
+      "xpath_selectors": [
+        "//button[contains(normalize-space(text()), 'Manage Account')]",
+        "//*[normalize-space(text())='Manage Account']",
+        "//button[normalize-space(text())='Manage Account']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": ""
+    }
+  ],
+  "ai_analysis": null,
+  "extraction_stats": {
+    "total_elements": 30,
+    "auth_elements": 1,
+    "form_elements": 0,
+    "validated_selectors": 30
+  }
+}

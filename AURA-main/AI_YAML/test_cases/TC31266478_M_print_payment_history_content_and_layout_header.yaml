@@ -1,0 +1,110 @@
+%YAML 1.2  
+---
+spec_version: "1.1"
+
+test_case: "print_payment_history_content_and_layout_header"
+test_case_id: "C31266478, C31409335"
+version: "1.0"       
+description: "Test Instant Services Print Payment History content and Layout"
+
+flow:
+  phases:
+    setup:
+      - file: instantservices_login.yaml
+  
+    steps:
+      - id: TC_account_dashboard_1
+        page: instantink/Dashboard
+        action: click
+        text: "Account Dashboard"
+        sleep: 10
+
+      - id: TC_print_and_payment_history_menu_1
+        page: instantink/Dashboard
+        action: click
+        text: "Print and Payment History"
+        sleep: 30
+
+      - id: TC_print_and_payment_history_page_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be a title, "Print and Payment History" positioned at the top left. If not, immediately return {{"status": false}}.
+              3. "instant ink" logo appears to the right of "Print and Payment History". If not, immediately return {{"status": false}}.
+              4. There must be exactly the words "Billing will occur at the end of each billing cycle." below the title of the page.  If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5
+
+      - id: TC_print_and_payment_history_page_2
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. A "Select printer" drop down selector is positioned next to "instant ink". If not, immediately return {{"status": false}}.
+              3. The "Select printer" drop down selector view must contain a printer icon and printer model. If not, immediately return {{"status": false}}.
+              4. "Enroll or replace a printer", hyperlink should appear below drop down selector. If not, immediately return {{"status": false}}.
+              5. "Billing Cycle Period" is at the bottom of "Print and Payment History". If not, immediately return {{"status": false}}.
+              
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5
+
+      - id: TC_vscroll_FAQ_1
+        page: instantink/Dashboard
+        action: click
+        text: "Frequently Asked Questions"
+        sleep: 1
+
+      - id: TC_faq_print_payment_history_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is to the right side of navigation pane.
+              2. You should find "Frequently Asked Questions" block.   If not, immediately return {{"status": false}}.
+              3. You should find "Print and Payment History" block.  If not, immediately return {{"status": false}}.
+              
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5
+
+    cleanup:
+      - file: instantservices_logout.yaml  

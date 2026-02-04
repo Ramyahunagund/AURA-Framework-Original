@@ -1,0 +1,166 @@
+%YAML 1.2  
+---
+spec_version: "1.1"
+
+test_case: "overview_status_card"
+test_case_id: "C31165176, C31266421"
+version: "1.0"       
+description: "Test Instant Services Overview status card"
+
+flow:
+  phases:
+    setup:
+      - file: instantservices_login.yaml
+
+    steps:
+      - file: instantservices_dashboard_overview.yaml
+      
+      - id: TC_status_pane_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the word "Overview" positioned at the top left. If not, immediately return {{"status": false}}.
+              3. There must be exactly the word "Status" positioned at the top left and below "Overview". If not, immediately return {{"status": false}}.
+              4. You should find HP printer model name below word "Status". If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+
+      - id: TC_store_system_time
+        page: instantink/Home    
+        action: store
+        text: ${CURRENT_TIME}
+        sleep: 3
+
+      - id: TC_status_pane_2
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. Below the HP printer model name you will find "Ready to print" or "Not ready to print" mentioned. If not, immediately return {{"status": false}}.
+              3. You should find printer readiness information and "Printer Details". If not, immediately return {{"status": false}}.
+              4. On the right side of word "Status", if the words are "Contacting printer", immediately return {{"status": true}}.
+              5. On the right side of word "Status", if it contains "Synced", then the time should be {CURRENT_TIME}. If not, immediately return {{"status": false}}. 
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+      
+      - id: TC_printer_details
+        page: instantink/Dashboard
+        action: click
+        text: "Printer Details"
+        sleep: 3
+
+      - id: TC_printer_details_modal
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is on the modal.
+              2. There must be exactly the word "My Printer" positioned at the top left. If not, immediately return {{"status": false}}.
+              3. You should find HP printer icon down below "My Printer". If not, immediately return {{"status": false}}.
+              4. You may optionally find "Printer Email" followed by email id. If not, immediately return {{"status": false}}.
+              5. You should find "Printer Serial Number" followed by serial number. If not, immediately return {{"status": false}}.
+              6. You should find "Service Enrolled Date" followed by date in month, date and year format. If not, immediately return {{"status": false}}.
+              7. You should find  "HP Connected Account" hyperlink below the printer icon. If not, immediately return {{"status": false}}.            
+              8. You should find printer enrolled status below the HP connected account hyperlink. If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+
+      - id: TC_hp_connected_account
+        page: instantink/Dashboard
+        action: click
+        label: "HP Connected Account"
+        sleep: 3  
+
+      - id: TC_overview_menu_1
+        page: instantink/Dashboard
+        action: click
+        text: "Overview"
+        sleep: 30
+
+      - id: TC_promotion_close_1
+        page: instantink/Dashboard
+        action: escape
+        sleep: 2
+
+      - id: TC_dismiss_emergency_banner_1
+        page: instantink/Dashboard
+        action: click
+        text: "Dismiss"
+        sleep: 3
+
+      - id: TC_overview_page_2
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is after the navigation pane.
+              2. There must be exactly the word "Overview" positioned at the top left. If not, immediately return {{"status": false}}.
+              3. "instant ink" appears to the right of "Overview". If not, immediately return {{"status": false}}.
+              4. A "Select printer" drop down selector is positioned next to "instant ink". If not, immediately return {{"status": false}}.
+              5. The "Select printer" drop down selector view must contain a printer icon and printer model. If not, immediately return {{"status": false}}.
+              6. "Enroll or replace a printer", hyperlink should appear below drop down selector. If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 5            
+
+      - id: TC_printer_details_modal_close
+        page: instantink/Dashboard
+        action: escape
+        sleep: 3
+
+    cleanup:
+      - file: instantservices_logout.yaml     

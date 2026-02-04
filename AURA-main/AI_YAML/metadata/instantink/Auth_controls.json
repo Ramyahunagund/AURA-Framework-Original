@@ -1,0 +1,235 @@
+{
+  "page_info": {
+    "url": "",
+    "title": "Sign In",
+    "timestamp": "2025-08-20 18:48:46.759854",
+    "capture_path": ""
+  },
+  "interactive_elements": [
+    {  
+      "tag_name": "a",  
+      "id": "sign-in",  
+      "classes": "",  
+      "text": "Sign in",  
+      "name": "sign-in",  
+      "type": "submit",  
+      "aria_label": "",  
+      "data_testid": "",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": 1202,  
+        "y": 549  
+      },  
+      "size": {  
+        "height": 24,  
+        "width": 43  
+      },  
+      "css_selectors": [  
+        "#sign-in"
+      ],  
+      "xpath_selectors": [  
+        "//*[@id='sign-in']",
+        "//button[@id='sign-in']",
+        "//button[normalize-space(text())='Sign in']",
+        "//*[normalize-space(text())='Sign in']",
+        "//*[@role='button' and normalize-space(text())='Sign in']" 
+      ],  
+      "auth_priority": true,  
+      "form_priority": false,
+      "label_text": ""        
+    }, 
+    {  
+      "tag_name": "input",  
+      "id": "username",  
+      "classes": "",  
+      "text": "Username or Email Address",  
+      "name": "",  
+      "type": "text",  
+      "aria_label": "username",  
+      "data_testid": "",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": " ",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": 48,  
+        "width": 392  
+      },  
+      "css_selectors": [  
+        "#username"
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"username\"]",  
+        "//*[@aria-label=\"username\"]" 
+      ],  
+      "auth_priority": true,  
+      "form_priority": false,
+      "label_text": ""         
+    },
+    {  
+      "tag_name": "button",  
+      "id": "user-name-form-submit",  
+      "classes": "",  
+      "text": "Use password",  
+      "name": "use-password",  
+      "type": "submit",  
+      "aria_label": "",  
+      "data_testid": "",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": "",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": 48,  
+        "width": 393  
+      },  
+      "css_selectors": [  
+        "#user-name-form-submit"
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"user-name-form-submit\"]",  
+        "//button[@id=\"user-name-form-submit\"]",  
+        "//button[normalize-space(text())='Use password']"  
+      ],  
+      "auth_priority": true,  
+      "form_priority": true,
+      "label_text": ""         
+    },
+    {  
+      "tag_name": "input",  
+      "id": "password",  
+      "classes": "",  
+      "text": "Password",  
+      "name": "",  
+      "type": "password",  
+      "aria_label": "password",  
+      "data_testid": "",  
+      "data_test": "",  
+      "data_cy": "",  
+      "data_qa": "",  
+      "href": "",  
+      "value": "",  
+      "placeholder": " ",  
+      "is_displayed": true,  
+      "is_enabled": true,  
+      "location": {  
+        "x": null,  
+        "y": null  
+      },  
+      "size": {  
+        "height": 48,  
+        "width": 393  
+      },  
+      "css_selectors": [  
+        "#password"
+      ],  
+      "xpath_selectors": [  
+        "//*[@id=\"password\"]",  
+        "//input[@id=\"password\"]",  
+        "//input[@id=\"password\" and @aria-label=\"password\"]"  
+      ],  
+      "auth_priority": true,  
+      "form_priority": true,
+      "label_text": ""   
+    },
+    {
+        "tag_name": "button",
+        "id": "",
+        "classes": "styles__Container-jarvis-react-consumer-layout__sc-ni2s4w-0 fMlYwS",
+        "text": "",
+        "name": "",
+        "type": "",
+        "aria_label": "",
+        "data_testid": "jarvis-react-consumer-layout__avatar_menu",
+        "data_test": "",
+        "data_cy": "",
+        "data_qa": "",
+        "href": "",
+        "value": "",
+        "placeholder": "",
+        "is_displayed": true,
+        "is_enabled": true,
+        "location": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "height": 0,
+          "width": 0
+        },
+        "css_selectors": [
+          "button[data-testid='jarvis-react-consumer-layout__avatar_menu']",
+          "button.styles__Container-jarvis-react-consumer-layout__sc-ni2s4w-0",
+          "#\\@jarvis\\/react-consumer-layout > div > header > div.vn-header__trailing-area.css-1xae5og > div > div.styles__Container-jarvis-react-consumer-layout__sc-xpmdfa-4.klipxI > div.styles__Container-jarvis-react-consumer-layout__sc-1k03jwg-0.eWirdI > button"
+        ],
+        "xpath_selectors": [
+          "//button[@data-testid='jarvis-react-consumer-layout__avatar_menu']",
+          "//*[@id='@jarvis/react-consumer-layout']/div/header/div[2]/div/div[2]/div[1]/button",
+          "//button[contains(@class, 'styles__Container-jarvis-react-consumer-layout__sc-ni2s4w-0')]"
+        ],
+        "auth_priority": true,
+        "form_priority": false,
+        "label_text": "User icon"
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "",
+      "text": "Sign Out",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "jarvis-react-consumer-layout__logout_button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "button[data-testid='jarvis-react-consumer-layout__logout_button']",
+        "#\\@jarvis\\/react-consumer-layout > div > header > div.vn-header__trailing-area.css-1xae5og > div > div.styles__Container-jarvis-react-consumer-layout__sc-xpmdfa-4.klipxI > div.styles__MenuModal-jarvis-react-consumer-layout__sc-xpmdfa-5.HAEdO.css-hriqda > div > div.styles__ProfileMenuCommonWrapper-jarvis-react-consumer-layout__sc-xpmdfa-0.styles__LogoutWrapper-jarvis-react-consumer-layout__sc-xpmdfa-3.eFnbIU > button"
+      ],
+      "xpath_selectors": [
+        "//button[@data-testid='jarvis-react-consumer-layout__logout_button']",
+        "//*[@id='@jarvis/react-consumer-layout']/div/header/div[2]/div/div[2]/div[2]/div/div[3]/button"
+      ],
+      "auth_priority": true,
+      "form_priority": false,
+      "label_text": ""
+    }
+  ]
+}

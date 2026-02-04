@@ -1,0 +1,46 @@
+{
+    "AT": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "BE": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "CA": [
+        {"type": "prepaid", "guid": "de8421dd-bf59-46a4-850b-1b9d7c581ee7", "identifier": "10226", "additionalPaymentRequired": false, "amountCents": 7500}
+    ],
+    "DE": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000},
+        {"type": "prepaid", "guid": "8b335923-8a55-438f-96e2-7857f1830c4c", "identifier": "12718", "additionalPaymentRequired": true, "amountCents": 500}
+    ],
+    "ES": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+           ],
+    "FI": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "FR": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "IE": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "IT": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "LU": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "NL": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "PT": [
+        {"type": "prepaid", "guid": "02ba58f3-8f8a-48d5-8d99-16559ee18ed1", "identifier": "10232", "additionalPaymentRequired": false, "amountCents": 6000}
+    ],
+    "US": [
+        {"type": "free", "guid": "ce59b2e0-1986-402b-941d-d82e5af4f9ec", "identifier": "11660", "additionalPaymentRequired": true, "months": 1}, 
+        {"type": "prepaid", "guid": "ede32bee-7084-4765-a3c2-90e1e15006a0", "identifier": "12030", "additionalPaymentRequired": false, "amountCents": 300},       
+        {"type": "prepaid", "guid": "1ac93f96-9b5d-435a-92d4-06f61b3e334d", "identifier": "10111", "additionalPaymentRequired": false, "amountCents": 3000}, 
+        {"type": "prepaid", "guid": "b165d912-1da5-44bf-aa25-885c2b43ae34", "identifier": "12018", "additionalPaymentRequired": false, "amountCents": 6000},
+        {"type": "prepaid", "guid": "36704de3-ef4e-4793-bbc8-dd264596b712", "identifier": "10181", "additionalPaymentRequired": true, "amountCents": 500}
+    ]
+}

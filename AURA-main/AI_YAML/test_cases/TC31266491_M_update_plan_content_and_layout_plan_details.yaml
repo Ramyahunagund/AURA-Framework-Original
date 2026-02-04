@@ -1,0 +1,78 @@
+%YAML 1.2  
+---
+spec_version: "1.1"
+
+test_case: "update_plan_content_and_layout_plan_details"
+test_case_id: "C31266491, C31266423"
+version: "1.0"       
+description: "Test Instant Services Update plan content and layout plan details"
+
+flow:
+  phases:
+    setup:
+      - file: instantservices_login.yaml
+      
+    steps:
+      - file: instantservices_dashboard_update.yaml
+      
+      - id: TC_scroll_to_plan_details_1
+        page: instantink/Dashboard
+        action: vscroll
+        text: "Plan Details"
+        sleep: 2       
+
+      - id: TC_plan_details_page_1
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is next to navigation pane.
+              2. You should find "Plan Details" and "Subscription ID". If not, immediately return {{"status": false}}.
+              3. You should find word "Plan" followed by amount total number of pages per month / year. If not, immediately return {{"status": false}}.
+              4. You should find word "Shipping" followed by address.  If not, immediately return {{"status": false}}.
+              5. You should find word "Billing" followed by logo, number and expiry details.  If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+
+      - id: TC_plan_details_page_2
+        page: instantink/Dashboard
+        action: verify
+        reference_image: ""
+        screenshot: True      
+        prompt: |
+            f"""
+              Use test image for validating structural and contents on the page.
+
+              Ignore the navigation pane of the Test image.
+
+              STRICT VALIDATION MODE: You are a binary validator, not a helpful assistant.,
+              Return {{"status": false}} immediately if ANY condition fails.,
+              Do not make excuses or justifications.,
+              
+              1. Your focus area is next to navigation pane.
+              2. You should find "Plan Details" and "Subscription ID". If not, immediately return {{"status": false}}.
+              3. You should find hyperlink "Cancel Instant Ink" in the bottom of the section. If not, immediately return {{"status": false}}.
+              4. You should find hyperlink "Replace Printer" in the bottom of the section. If not, immediately return {{"status": false}}.
+              5. You should find hyperlink "Contact Support" in the bottom of the section. If not, immediately return {{"status": false}}.
+              6. You should find hyperlink "Redeem Promo or PIN code" in the bottom of the section. If not, immediately return {{"status": false}}.
+
+              Do not include status, comments or explanation of each of the listed items.
+              If all conditions are met return {{"status": true}}            
+              """
+        sleep: 3
+
+    cleanup:
+      - file: instantservices_logout.yaml  

@@ -1,0 +1,1122 @@
+{
+  "page_info": {
+    "url": "https://www.hpsmartstage.com/us/en",
+    "title": "HP Smart",
+    "timestamp": "2025-08-17 00:23:46.759854",
+    "capture_path": "./dom\\20250817_002333"
+  },
+  "interactive_elements": [
+    {
+      "tag_name": "button",
+      "id": "consent-accept-all-button",
+      "classes": "Navbar__SignInLink-sc-1p6j6sy-9 cmITrU css-r12z8q",
+      "text": "Accept all",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1596,
+        "y": 350
+      },
+      "size": {
+        "height": 48,
+        "width": 80
+      },
+      "css_selectors": [
+        "sc-dhKdcB.bAToan.css-c73gym",
+        "#consent-accept-all-button"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"consent-accept-all-button\"]",
+        "//*[@id='consent-accept-all-button']",
+        "//*[normalize-space(text())='Accept all']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "sign-in-link",
+      "classes": "Navbar__SignInLink-sc-1p6j6sy-9 cmITrU css-r12z8q",
+      "text": "Sign In",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1596,
+        "y": 9
+      },
+      "size": {
+        "height": 48,
+        "width": 80
+      },
+      "css_selectors": [
+        ".Navbar__SignInLink-sc-1p6j6sy-9.cmITrU.css-r12z8q",
+        "#sign-in-link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"sign-in-link\"]",
+        "//*[@id='sign-in-link']",
+        "//*[normalize-space(text())='Sign In']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "bltb6f105fe9802a6db",
+      "classes": "ImageAndBrief__StyledButton-kwmeh6-5 fjzJY css-13gwoo4",
+      "text": "Sign In",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1527,
+        "y": 1461
+      },
+      "size": {
+        "height": 48,
+        "width": 112
+      },
+      "css_selectors": [
+        "#bltb6f105fe9802a6db",
+        ".ImageAndBrief__StyledButton-kwmeh6-5.fjzJY.css-13gwoo4"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"bltb6f105fe9802a6db\"]",
+        "//*[@id='bltb6f105fe9802a6db']",
+        "//*[normalize-space(text())='Sign In']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "wireless-printing center",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "Wireless Printing Center",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpsmartstage.com/us/en/wireless-printing",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1027,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 157
+      },
+      "css_selectors": [
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"wireless-printing center\"]",
+        "//a[contains(normalize-space(text()), 'Wireless Printing Center')]",
+        "//*[normalize-space(text())='Wireless Printing Center']",
+        "//a[normalize-space(text())='Wireless Printing Center']",
+        "//*[@id='wireless-printing center']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "smart-help",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "Help Center",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpsmartstage.com/us/en/smart-help",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1200,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 76
+      },
+      "css_selectors": [
+        "#smart-help",
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"smart-help\"]",
+        "//a[contains(normalize-space(text()), 'Help Center')]",
+        "//*[normalize-space(text())='Help Center']",
+        "//a[normalize-space(text())='Help Center']",
+        "//*[@id='smart-help']"
+      ],
+      "auth_priority": true,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "LocaleSelector__StyledButton-sc-1xx0wk-1 iHirmj css-btvzp8",
+      "text": "United States (English)Chevron Down",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1360,
+        "y": 10
+      },
+      "size": {
+        "height": 46,
+        "width": 219
+      },
+      "css_selectors": [
+        ".LocaleSelector__StyledButton-sc-1xx0wk-1.iHirmj.css-btvzp8"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/header[1]/div[2]/div[1]/button[1]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "create-account-button",
+      "classes": "Navbar__CreateAcctButton-sc-1p6j6sy-10 bleqBe css-13gwoo4",
+      "text": "Create Account",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1708,
+        "y": 12
+      },
+      "size": {
+        "height": 42,
+        "width": 159
+      },
+      "css_selectors": [
+        ".Navbar__CreateAcctButton-sc-1p6j6sy-10.bleqBe.css-13gwoo4",
+        "#create-account-button"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"create-account-button\"]",
+        "//*[@id='create-account-button']",
+        "//*[normalize-space(text())='Create Account']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "previous-slide-button",
+      "classes": "PagingControls__SlideButton-sc-1qcvxwd-0 fEAoqI css-e6j02z",
+      "text": "Chevron Left",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1718,
+        "y": 841
+      },
+      "size": {
+        "height": 56,
+        "width": 56
+      },
+      "css_selectors": [
+        "#previous-slide-button",
+        ".PagingControls__SlideButton-sc-1qcvxwd-0.fEAoqI.css-e6j02z"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"previous-slide-button\"]",
+        "//*[normalize-space(text())='Chevron Left']",
+        "//*[@id='previous-slide-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "next-slide-button",
+      "classes": "PagingControls__SlideButton-sc-1qcvxwd-0 fEAoqI css-e6j02z",
+      "text": "Chevron Right",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1790,
+        "y": 841
+      },
+      "size": {
+        "height": 56,
+        "width": 56
+      },
+      "css_selectors": [
+        "#next-slide-button",
+        ".PagingControls__SlideButton-sc-1qcvxwd-0.fEAoqI.css-e6j02z"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"next-slide-button\"]",
+        "//*[normalize-space(text())='Chevron Right']",
+        "//*[@id='next-slide-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "bltd34c6ed245478964",
+      "classes": "ImageAndBrief__StyledButton-kwmeh6-5 fjzJY css-13gwoo4",
+      "text": "Set Up",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 248,
+        "y": 1449
+      },
+      "size": {
+        "height": 48,
+        "width": 112
+      },
+      "css_selectors": [
+        "#bltd34c6ed245478964",
+        ".ImageAndBrief__StyledButton-kwmeh6-5.fjzJY.css-13gwoo4"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"bltd34c6ed245478964\"]",
+        "//*[normalize-space(text())='Set Up']",
+        "//*[@id='bltd34c6ed245478964']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "button",
+      "id": "",
+      "classes": "ServiceItem__StyledButton-sc-1qgkbyg-7 nGoET css-13gwoo4",
+      "text": "Learn More",
+      "name": "",
+      "type": "button",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 459,
+        "y": 5208
+      },
+      "size": {
+        "height": 84,
+        "width": 130
+      },
+      "css_selectors": [
+        ".ServiceItem__StyledButton-sc-1qgkbyg-7.nGoET.css-13gwoo4"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/main[1]/div[1]/div[1]/div[5]/div[2]/div[2]/div[2]/button[1]",
+        "//*[normalize-space(text())='Learn More']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "Navbar__LinkedBrand-sc-1p6j6sy-3 iEmRcH",
+      "text": "HP Smart",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpsmartstage.com/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 20,
+        "y": 12
+      },
+      "size": {
+        "height": 40,
+        "width": 128
+      },
+      "css_selectors": [
+        ".Navbar__LinkedBrand-sc-1p6j6sy-3.iEmRcH"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/header[1]/div[1]/div[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'HP Smart')]",
+        "//*[normalize-space(text())='HP Smart']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "cs7048da24d06272d4",
+      "classes": "Navbar__StyledLink-sc-1p6j6sy-5 iRChgl",
+      "text": "Instant Ink",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://instantink.hpconnected.com/us/en/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 200,
+        "y": 24
+      },
+      "size": {
+        "height": 16,
+        "width": 70
+      },
+      "css_selectors": [
+        "#cs7048da24d06272d4",
+        ".Navbar__StyledLink-sc-1p6j6sy-5.iRChgl"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"cs7048da24d06272d4\"]",
+        "//a[contains(normalize-space(text()), 'Instant Ink')]",
+        "//a[normalize-space(text())='Instant Ink']",
+        "//*[@id='cs7048da24d06272d4']",
+        "//*[normalize-space(text())='Instant Ink']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "csfdbbaf1fe5e6cfb3",
+      "classes": "Navbar__StyledLink-sc-1p6j6sy-5 iRChgl",
+      "text": "Printer Setup",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://123.hp.com/us/en/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 324,
+        "y": 24
+      },
+      "size": {
+        "height": 16,
+        "width": 87
+      },
+      "css_selectors": [
+        "#csfdbbaf1fe5e6cfb3",
+        ".Navbar__StyledLink-sc-1p6j6sy-5.iRChgl"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"csfdbbaf1fe5e6cfb3\"]",
+        "//a[contains(normalize-space(text()), 'Printer Setup')]",
+        "//*[normalize-space(text())='Printer Setup']",
+        "//a[normalize-space(text())='Printer Setup']",
+        "//*[@id='csfdbbaf1fe5e6cfb3']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "cs4fa3814bb8e7707f",
+      "classes": "Navbar__StyledLink-sc-1p6j6sy-5 iRChgl",
+      "text": "Ink",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://hp.com/go/ink",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 465,
+        "y": 24
+      },
+      "size": {
+        "height": 16,
+        "width": 20
+      },
+      "css_selectors": [
+        "#cs4fa3814bb8e7707f",
+        ".Navbar__StyledLink-sc-1p6j6sy-5.iRChgl"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"cs4fa3814bb8e7707f\"]",
+        "//*[normalize-space(text())='Ink']",
+        "//a[normalize-space(text())='Ink']",
+        "//*[@id='cs4fa3814bb8e7707f']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "cs1cbc5c368b2e2928",
+      "classes": "Navbar__StyledLink-sc-1p6j6sy-5 iRChgl",
+      "text": "Help & Support",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://support.hp.com/us-en/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 539,
+        "y": 24
+      },
+      "size": {
+        "height": 16,
+        "width": 100
+      },
+      "css_selectors": [
+        "#cs1cbc5c368b2e2928",
+        ".Navbar__StyledLink-sc-1p6j6sy-5.iRChgl"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"cs1cbc5c368b2e2928\"]",
+        "//a[contains(normalize-space(text()), 'Help & Support')]",
+        "//*[normalize-space(text())='Help & Support']",
+        "//a[normalize-space(text())='Help & Support']",
+        "//*[@id='cs1cbc5c368b2e2928']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "iosStoreBadge",
+      "classes": "HeroCarouselSlide__Badge-sc-8rbql0-6 jdiclK",
+      "text": "",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://apps.apple.com/app/hp-smart/id469284907",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 60,
+        "y": 841
+      },
+      "size": {
+        "height": 49,
+        "width": 126
+      },
+      "css_selectors": [
+        "#iosStoreBadge",
+        ".HeroCarouselSlide__Badge-sc-8rbql0-6.jdiclK"
+      ],
+      "xpath_selectors": [
+        "//*[@id='iosStoreBadge']",
+        "//*[@id=\"iosStoreBadge\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "googleBadge",
+      "classes": "HeroCarouselSlide__Badge-sc-8rbql0-6 jdiclK",
+      "text": "",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://play.google.com/store/apps/details?id=com.hp.printercontrol",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 202,
+        "y": 841
+      },
+      "size": {
+        "height": 49,
+        "width": 142
+      },
+      "css_selectors": [
+        "#googleBadge",
+        ".HeroCarouselSlide__Badge-sc-8rbql0-6.jdiclK"
+      ],
+      "xpath_selectors": [
+        "//*[@id='googleBadge']",
+        "//*[@id=\"googleBadge\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "microsoftBadge",
+      "classes": "HeroCarouselSlide__Badge-sc-8rbql0-6 jdiclK",
+      "text": "",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.microsoft.com/en-us/p/hp-smart/9wzdncrfhwlh",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 359,
+        "y": 841
+      },
+      "size": {
+        "height": 49,
+        "width": 116
+      },
+      "css_selectors": [
+        "#microsoftBadge",
+        ".HeroCarouselSlide__Badge-sc-8rbql0-6.jdiclK"
+      ],
+      "xpath_selectors": [
+        "//*[@id='microsoftBadge']",
+        "//*[@id=\"microsoftBadge\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "macStoreBadge",
+      "classes": "HeroCarouselSlide__Badge-sc-8rbql0-6 jdiclK",
+      "text": "",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://apps.apple.com/app/hp-smart/id1474276998",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 492,
+        "y": 841
+      },
+      "size": {
+        "height": 49,
+        "width": 164
+      },
+      "css_selectors": [
+        "#macStoreBadge",
+        ".HeroCarouselSlide__Badge-sc-8rbql0-6.jdiclK"
+      ],
+      "xpath_selectors": [
+        "//*[@id='macStoreBadge']",
+        "//*[@id=\"macStoreBadge\"]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Shop Now",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "http://hp.com/go/ink",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1445,
+        "y": 4450
+      },
+      "size": {
+        "height": 24,
+        "width": 73
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/main[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[2]/span[2]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'Shop Now')]",
+        "//*[normalize-space(text())='Shop Now']",
+        "//a[normalize-space(text())='Shop Now']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "www.keypointintelligence.com/HPInstantInk",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.keypointintelligence.com/HPInstantInk",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1216,
+        "y": 7474
+      },
+      "size": {
+        "height": 18,
+        "width": 248
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/main[1]/div[1]/div[1]/div[8]/p[1]/a[1]",
+        "//a[contains(normalize-space(text()), 'www.keypointintelligence.com/HPInstantInk')]",
+        "//*[normalize-space(text())='www.keypointintelligence.com/HPInstantInk']",
+        "//a[normalize-space(text())='www.keypointintelligence.com/HPInstantInk']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "hpinstantink.com/terms",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://instantink.hpconnected.com/us/en/terms",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 718,
+        "y": 7572
+      },
+      "size": {
+        "height": 18,
+        "width": 135
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/main[1]/div[1]/div[1]/div[8]/p[3]/a[1]",
+        "//a[contains(normalize-space(text()), 'hpinstantink.com/terms')]",
+        "//*[normalize-space(text())='hpinstantink.com/terms']",
+        "//a[normalize-space(text())='hpinstantink.com/terms']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "keypointintelligence.com/HPapp",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://keypointintelligence.com/hpapp",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 917,
+        "y": 7630
+      },
+      "size": {
+        "height": 18,
+        "width": 181
+      },
+      "css_selectors": [],
+      "xpath_selectors": [
+        "//*[@id=\"pageContentContainer\"]/main[1]/div[1]/div[1]/div[8]/p[4]/a[1]",
+        "//a[contains(normalize-space(text()), 'keypointintelligence.com/HPapp')]",
+        "//*[normalize-space(text())='keypointintelligence.com/HPapp']",
+        "//a[normalize-space(text())='keypointintelligence.com/HPapp']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "hp-dot com",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "HP.com",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://hp.com/us-en/",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 960,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 50
+      },
+      "css_selectors": [
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"hp-dot com\"]",
+        "//a[contains(normalize-space(text()), 'HP.com')]",
+        "//*[normalize-space(text())='HP.com']",
+        "//a[normalize-space(text())='HP.com']",
+        "//*[@id='hp-dot com']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "hp-smart terms of use",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "HP Smart Terms of Use",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hpsmartstage.com/us/en/tou",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1292,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 151
+      },
+      "css_selectors": [
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"hp-smart terms of use\"]",
+        "//a[contains(normalize-space(text()), 'HP Smart Terms of Use')]",
+        "//*[normalize-space(text())='HP Smart Terms of Use']",
+        "//a[normalize-space(text())='HP Smart Terms of Use']",
+        "//*[@id='hp-smart terms of use']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "hp-privacy",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "Privacy",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://hp.com/go/privacy",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1458,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 48
+      },
+      "css_selectors": [
+        "#hp-privacy",
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"hp-privacy\"]",
+        "//*[normalize-space(text())='Privacy']",
+        "//a[normalize-space(text())='Privacy']",
+        "//*[@id='hp-privacy']",
+        "//a[contains(normalize-space(text()), 'Privacy')]"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "your-privacy choices",
+      "classes": "Footer__StyledLink-sc-1vhefj0-1 esUWRI vn-footer__link",
+      "text": "Your Privacy Choices",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "https://www.hp.com/us-en/privacy/your-privacy-choices.html",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 1522,
+        "y": 7671
+      },
+      "size": {
+        "height": 21,
+        "width": 134
+      },
+      "css_selectors": [
+        ".Footer__StyledLink-sc-1vhefj0-1.esUWRI.vn-footer__link"
+      ],
+      "xpath_selectors": [
+        "//*[@id=\"your-privacy choices\"]",
+        "//a[contains(normalize-space(text()), 'Your Privacy Choices')]",
+        "//*[normalize-space(text())='Your Privacy Choices']",
+        "//a[normalize-space(text())='Your Privacy Choices']",
+        "//*[@id='your-privacy choices']"
+      ],
+      "auth_priority": false,
+      "form_priority": false
+    },
+    {
+      "tag_name": "a",
+      "id": "",
+      "classes": "",
+      "text": "Enroll in HP Instant Ink",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "enroll-II-pp",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "/print_plans",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "a[data-testid='enroll-II-pp']"
+      ],
+      "xpath_selectors": [
+        "//*[@data-testid='enroll-II-pp']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Enroll in HP Instant Ink"
+    },
+    {
+      "tag_name": "a",
+      "id": "enroll-printer-on-promo-card",
+      "classes": "",
+      "text": "Sign Up Now",
+      "name": "",
+      "type": "",
+      "aria_label": "",
+      "data_testid": "get-started-button",
+      "data_test": "",
+      "data_cy": "",
+      "data_qa": "",
+      "href": "",
+      "value": "",
+      "placeholder": "",
+      "is_displayed": true,
+      "is_enabled": true,
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "height": 0,
+        "width": 0
+      },
+      "css_selectors": [
+        "#enroll-printer-on-promo-card",
+        "a[data-testid='get-started-button']"
+      ],
+      "xpath_selectors": [
+        "//*[@id='enroll-printer-on-promo-card']",
+        "//*[@data-testid='get-started-button']"
+      ],
+      "auth_priority": false,
+      "form_priority": false,
+      "label_text": "Sign Up Now"
+    }    
+  ],
+  "ai_analysis": null,
+  "extraction_stats": {
+    "total_elements": 27,
+    "auth_elements": 4,
+    "form_elements": 0,
+    "validated_selectors": 27
+  }
+}

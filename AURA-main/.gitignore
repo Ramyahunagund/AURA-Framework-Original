@@ -1,0 +1,52 @@
+# Ignore Files and Directories
+test_flows_common/.env
+test_flows_common/.env*
+test_flows_common/token.json
+test_flows_common/credentials.json
+temp/
+venv/
+test_flows_exec_results/
+z_scraped_data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.pyd
+*.pyo
+*.exe
+*.dll
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+
+# VSCode
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temp files
+*.sqlite3
+*.bak
+*.swp
+*.swo
+*.tmp
+secrets/
+secrets.zip
+
+# Ignore NTFS alternate data streams (Zone.Identifier, etc)
+*:[Zz]one.Identifier*

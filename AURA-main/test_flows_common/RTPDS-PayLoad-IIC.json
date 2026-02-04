@@ -1,0 +1,231 @@
+{
+    "newCred_override": "True",
+    "version": "1.4.0",
+    "entityId": "{{cloud_id}}",
+    "fwVersion": "G2PS-FW",
+    "triggerReason": "lop",
+    "deviceViolations": [],
+    "lastValidConfigSeqNum": "{{lastValidConfigSeqNum}}",
+    "lastReceivedConfigSeqNum": "{{lastReceivedConfigSeqNum}}",
+    "lastValidCredentialSeqNum": "{{lastValidCredentialSeqNum}}",
+    "supplyEventSeqNum": 389520511,
+    "supportedPublicKeyId": "L0Ldmce0fVTPdn0Sgzl2vQO21GIAkUREpR5vUrJ0fyk",
+    "deviceTime": "{{UniqueTimestamp}}",
+    "eoop": 8,
+    "remoteAttestationOverrides": {
+        "totalImpressionCount": "{{totalImpressionCount}}",
+        "bizlogicImpressionCount": "{{bizlogicImpressionCount}}",
+        "internalReportImpressionCount": "{{internalReportImpressionCount}}",
+        "snapshotCountersSum": "{{snapshotCountersSum}}"
+    },
+    "remoteAttestation": {
+        "crsSessionData": "{{crsSessionData}}",
+        "attestationDataMap": {
+            "internalReportImpressionCount": {
+                "length": 4,
+                "offset": 162
+            },
+            "snapshotCountersSum": {
+                "length": 4,
+                "offset": 201
+            },
+            "totalImpressionCount": {
+                "length": 4,
+                "offset": 66
+            },
+            "bizlogicImpressionCount": {
+                "length": 4,
+                "offset": 120
+            },
+            "manufacturingDeviceUuid": {
+                "length": 36,
+                "offset": 20
+            },
+            "templateId": "Tools-LaserC.1"
+        },
+        "version": "1.4.0",
+        "signature": "jMaWkqYO4l3jknWdfBNpXLv7jcaJNfkr3rNJgUexBL/+qmXNw8fB4ItuFB8K65ejooXWkD2Dfphb9cHYFu8EqJZaCEJIn5hJuIJLEhJsBy+jL86l4KHcblwnXRls7foWHyWUj/rcGLqx6O18KBwCqPvhbyLtgxRv0wTX6vTr0Ee8wpgRuhsQbm1GHjFHBpeSjnamSKUsV+869MZrUny7jMnFubEhPwhlOH/TOYCVCwv97vfOoT6AL8FuHBBOyBq6UetbC8nwUqhO9h083n/Qm4qi14a/x+P65TR5BrXnUeuzybsbo/LhYXBXBBwmemzNvrpDlInKbCI4JVXwK6+hGQ==",
+        "rootKeyId": "a3032894f86362f0"
+    },
+    "supplyStatus": {
+        "version": "1.4.0",
+        "supplyStates": {
+            "Y": {
+                "colorCode": "Y",
+                "inkSuggestedValidations": [
+                    "ok"
+                ],
+                "suggestedValidations": [
+                    "ok"
+                ],
+                "inkViolations": [],
+                "inkDetailInfo": {
+                    "isTrial": "false",
+                    "tradeMark": "065648693480410349921468",
+                    "timeTravel4": "true",
+                    "timeTravel5": "true",
+                    "timeTravel2": "true",
+                    "timeTravel3": "true",
+                    "timeTravel1": "true",
+                    "subBrand": 1788701712,
+                    "supplyKeyDescription": 1386760877,
+                    "safeStop": "true",
+                    "persoRevision": 639603797,
+                    "selectabilityNumber": "683154386331142642464896",
+                    "ssa": 2139603361,
+                    "class": 728542026,
+                    "supplyType": 2106730770,
+                    "majorAccount": 1923176800,
+                    "isUsed": "false",
+                    "templateMajor": 1339275934,
+                    "modelNumber": 2013753795,
+                    "hostTradeId": 1833244460,
+                    "suggestedMessage": "ok",
+                    "familyId": 1250939241
+                },
+                "insertionState": "ack",
+                "fulfillmentState": "requestSupplyFulfillment",
+                "pctLevelRemaining": 100,
+                "consumableUniqueId": "{{uuid}}-Y",
+                "deviceAssessment": "genuineHp",
+                "pct10LevelRemaining": 100,
+                "supplyModelType": "starter",
+                "isRefill": "false",
+                "region": 61750
+            },
+            "M": {
+                "colorCode": "M",
+                "inkSuggestedValidations": [
+                    "ok"
+                ],
+                "suggestedValidations": [
+                    "ok"
+                ],
+                "inkViolations": [],
+                "inkDetailInfo": {
+                    "isTrial": "false",
+                    "tradeMark": "065648693480410349921468",
+                    "timeTravel4": "true",
+                    "timeTravel5": "true",
+                    "timeTravel2": "true",
+                    "timeTravel3": "true",
+                    "timeTravel1": "true",
+                    "subBrand": 1788701712,
+                    "supplyKeyDescription": 1386760877,
+                    "safeStop": "true",
+                    "persoRevision": 639603797,
+                    "selectabilityNumber": "683154386331142642464896",
+                    "ssa": 2139603361,
+                    "class": 728542026,
+                    "supplyType": 2106730770,
+                    "majorAccount": 1923176800,
+                    "isUsed": "false",
+                    "templateMajor": 1339275934,
+                    "modelNumber": 2013753795,
+                    "hostTradeId": 1833244460,
+                    "suggestedMessage": "ok",
+                    "familyId": 1250939241
+                },
+                "insertionState": "ack",
+                "fulfillmentState": "requestSupplyFulfillment",
+                "pctLevelRemaining": 100,
+                "consumableUniqueId": "{{uuid}}-M",
+                "deviceAssessment": "genuineHp",
+                "pct10LevelRemaining": 100,
+                "supplyModelType": "starter",
+                "isRefill": "false",
+                "region": 61750
+            },
+            "C": {
+                "colorCode": "C",
+                "inkSuggestedValidations": [
+                    "ok"
+                ],
+                "suggestedValidations": [
+                    "ok"
+                ],
+                "inkViolations": [],
+                "inkDetailInfo": {
+                    "isTrial": "false",
+                    "tradeMark": "065648693480410349921468",
+                    "timeTravel4": "true",
+                    "timeTravel5": "true",
+                    "timeTravel2": "true",
+                    "timeTravel3": "true",
+                    "timeTravel1": "true",
+                    "subBrand": 1788701712,
+                    "supplyKeyDescription": 1386760877,
+                    "safeStop": "true",
+                    "persoRevision": 639603797,
+                    "selectabilityNumber": "683154386331142642464896",
+                    "ssa": 2139603361,
+                    "class": 728542026,
+                    "supplyType": 2106730770,
+                    "majorAccount": 1923176800,
+                    "isUsed": "false",
+                    "templateMajor": 1339275934,
+                    "modelNumber": 2013753795,
+                    "hostTradeId": 1833244460,
+                    "suggestedMessage": "ok",
+                    "familyId": 1250939241
+                },
+                "insertionState": "ack",
+                "fulfillmentState": "requestSupplyFulfillment",
+                "pctLevelRemaining": 100,
+                "consumableUniqueId": "{{uuid}}-C",
+                "deviceAssessment": "genuineHp",
+                "pct10LevelRemaining": 100,
+                "supplyModelType": "starter",
+                "isRefill": "false",
+                "region": 61750
+            },
+            "K": {
+                "colorCode": "K",
+                "inkSuggestedValidations": [
+                    "ok"
+                ],
+                "suggestedValidations": [
+                    "ok"
+                ],
+                "inkViolations": [],
+                "inkDetailInfo": {
+                    "isTrial": "false",
+                    "tradeMark": "065648693480410349921468",
+                    "timeTravel4": "true",
+                    "timeTravel5": "true",
+                    "timeTravel2": "true",
+                    "timeTravel3": "true",
+                    "timeTravel1": "true",
+                    "subBrand": 1788701712,
+                    "supplyKeyDescription": 1386760877,
+                    "safeStop": "true",
+                    "persoRevision": 639603797,
+                    "selectabilityNumber": "683154386331142642464896",
+                    "ssa": 2139603361,
+                    "class": 728542026,
+                    "supplyType": 2106730770,
+                    "majorAccount": 1923176800,
+                    "isUsed": "false",
+                    "templateMajor": 1339275934,
+                    "modelNumber": 2013753795,
+                    "hostTradeId": 1833244460,
+                    "suggestedMessage": "ok",
+                    "familyId": 1250939241
+                },
+                "insertionState": "ack",
+                "fulfillmentState": "requestSupplyFulfillment",
+                "pctLevelRemaining": 100,
+                "consumableUniqueId": "{{uuid}}-K",
+                "deviceAssessment": "genuineHp",
+                "pct10LevelRemaining": 100,
+                "supplyModelType": "starter",
+                "isRefill": "false",
+                "region": 61750
+            }
+        },
+        "printerSupplyRegion": 5234,
+        "supplyInsertionCount": "{{supplyInsertionCount}}",
+        "supplySetId": "6b3ab36c-e479-4ecd-90ef-fe05474848a7-0000000001"
+    },
+    "serviceIssuer": "HP Instant Ink"
+}

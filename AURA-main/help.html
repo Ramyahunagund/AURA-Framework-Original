@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instant Ink Aura CLI Help</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; max-width: 900px; margin: auto; }
+    code { background: #f4f4f4; padding: 2px 5px; border-radius: 4px; }
+    pre { background: #f4f4f4; padding: 1em; border-radius: 6px; overflow-x: auto; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.3em; }
+    ul { margin-bottom: 1em; }
+    .note { color: #446; background: #f8f8f8; padding: 0.6em 1em; border-left: 4px solid #6cf; margin: 1em 0; }
+  </style>
+</head>
+<body>
+  <h1>Instant Ink Aura - CLI Help</h1>
+  <p>
+    <b>UI scraping and validation for HP Instant Ink flows</b><br>
+    Supports per-context and per-subcontext checkpoints, screenshots, element metadata, and visual diffing for robust regression safety.
+  </p>
+
+  <!-- Table of Contents -->
+<nav style="margin-bottom:2em;">
+  <b>Contents:</b>
+  <ul>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#parameters">Parameters</a></li>
+    <li><a href="#modes">Modes</a></li>
+    <li><a href="#contexts">Contexts & Subcontexts</a></li>
+    <li><a href="#screenshotonly">Screenshot-Only</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#flowcode">Calling from Flow Code</a></li>
+    <li><a href="#output">Output</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#troubleshooting">Troubleshooting & Support</a></li>
+  </ul>
+</nav>
+
+  <h2 id="usage">Usage</h2>
+  <pre><code>python aura.py --flow FlowName --mode scrape|validate|noop --stack stage|pie --locale "Country Name" [--printer_profile PROFILE_NAME] [--easy_enroll yes|no] [--biz_model Flex|E2E] [--headless] [--target OSSPLATFORM] [--screenshot_only yes|no] [--language LANG_CODE] [--debug]</code></pre>
+
+# Add a new flow structure
+python aura.py --addflow FlowName
+</code></pre>
+  <h2 id="parameters">Parameters</h2>
+  <ul>
+    <li><code>--addflow</code>: (Exclusive) Add a new test flow with the given name. Creates directories, sample Python, and Excel files for the flow.</li>
+    <li><code>--flow</code>: Name of the test flow (e.g., <code>CreateV3Account</code>)</li>
+    <li><code>--mode</code>: <code>scrape</code>, <code>validate</code>, or <code>noop</code></li>
+    <li><code>--stack</code>: <code>stage</code> (STAGE) or <code>pie</code> (PIE)</li>
+    <li><code>--locale</code>: Country name (e.g., <code>United States</code>)</li>
+
+    <li><code>--language</code>: (Optional) Language code (e.g., <code>fr</code>)</li>
+    <li><code>--printer_profile</code>: (Optional) Printer profile name</li>
+    <li><code>--easy_enroll</code>: (Optional) <code>yes</code> or <code>no</code> for easy enroll scenarios</li>
+    <li><code>--biz_model</code>: (Optional) <code>Flex</code> (default) or <code>E2E</code></li>
+    <li><code>--headless</code>: (Optional) Run browser in headless mode</li>
+    <li><code>--screenshot_only</code>: (Optional) If <code>yes</code>, captures only a full-page screenshot at this checkpoint without scraping elements</li>
+    <li><code>--target</code>: (Optional) OSS profile. Supported values:
+      <ul>
+        <li><code>web</code> (default)</li>
+        <li><code>wingotham</code></li>
+        <li><code>macgotham</code></li>
+        <li><code>android</code></li>
+        <li><code>ios</code></li>
+        <li><code>hpxwindows</code></li>
+        <li><code>hpxmac</code></li>
+        <li><code>hpxandroid</code></li>
+        <li><code>hpxios</code></li>
+      </ul>
+    </li>
+        <li><code>--debug</code>: (Optional) Enable debug logging</li>
+  </ul>
+
+  <div class="note" id="modes">
+    <b>Modes:</b><br>
+    <ul>
+      <li><b>scrape</b>: Scrape all visible and interactive UI elements at each checkpoint, including screenshots and full metadata.</li>
+      <li><b>validate</b>: Compare the live UI against master data, with screenshots, image diffs, and results reporting.</li>
+      <li><b>noop</b>: No action performed, no files are written; use for dry-runs, code/test discovery, or debugging flows only.</li>
+    </ul>
+  </div>
+  <div class="note" id="contexts">
+    <b>Contexts & Subcontexts:</b> Contexts identify a unique screen/checkpoint. Subcontext enables granular checkpoints on state changes, like expanding FAQs, switching plans. Screenshots and scrape/validate results are labeled accordingly.<br>
+    <br>
+    In flow code: <code>stage_callback("context_name", page)</code><br>
+    In flow code: <code>stage_callback("context_name", "sub_context_name", page)</code>
+  </div>
+  <div class="note" id="screenshotonly">
+    <b>Screenshot-Only:</b> If a full-page screenshot is required at a checkpoint (no DOM scraping or validation), <br>use <code>--screenshot_only yes</code>.<br>
+    <br>
+    In flow code: <code>stage_callback("context_name", page, screenshot_only=True)</code><br>
+    In flow code: <code>stage_callback("context_name", "sub_context_name", page, screenshot_only=True)</code>
+  </div>
+
+  <h2 id="examples">Examples</h2>
+  <pre><code># Scrape CreateV3Account in the US (default context per flow)
+python aura.py --flow CreateV3Account --mode scrape --stack pie --locale "United States"
+
+# Validate CreateIISubscription in United States with manhattan_yeti printer profile
+python aura.py --flow CreateIISubscription --mode validate --stack stage --locale "United States" --printer_profile manhattan_yeti
+
+# Scrape EnrollNonFlipOOBE in the US with no easy enroll and targeting wingotham through the OSS simulator
+python aura.py --flow EnrollNonFlipOOBE --mode scrape --stack stage --locale "United States" --printer_profile manhattan_yeti --easy_enroll no --target wingotham
+
+# Validate CreateV3Account for Belgium in Dutch
+python aura.py --flow CreateV3Account --mode validate --stack stage --locale Belgium --language nl
+
+# Scrape EnrollFlipOOBE with a printer and easy enroll
+python aura.py --flow EnrollFlipOOBE --mode scrape --stack pie --locale Australia --printer_profile manhattan_yeti --easy_enroll yes --target ios
+
+# No-operation run (noop): No scraping or validation performed
+python aura.py --flow CreateV3Account --mode noop --stack stage --locale "United States"
+
+# Add a new flow structure
+python aura.py --addflow CreateV3Account
+  </code></pre>
+
+  <h2 id="output">Output</h2>
+  <ul>
+    <li>Scrape results: <code>z_scraped_data/&lt;flow&gt;/&lt;locale&gt;/&lt;timestamp&gt;/</code></li>
+    <li>Validation results: <code>test_flows_exec_results/&lt;flow&gt;_&lt;locale&gt;_&lt;timestamp&gt;/</code></li>
+    <li>Element screenshots and full-page screenshots are grouped under <code>screenshots/</code> per run</li>
+    <li>Validation image diffs and failures: <code>validation_screenshots/</code> and <code>validation_failure_screenshots/</code> subfolders</li>
+    <li><b>noop:</b> No outputs or files produced; execution only for code/flow structure validation.</li>
+    <li>All logs are written to <code>logs/framework.log</code>.</li>
+  </ul>
+
+  <h2 id="notes">Notes</h2>
+  <ul>
+    <li>Excel outputs support <b>Context</b> and <b>Subcontext</b> columns for advanced flows.</li>
+    <li>Screenshots and all results are named using both context and subcontext (if supplied) for clear traceability.</li>
+    <li>Screenshot-only mode does not produce scrape/validation Excel output for that checkpoint; only a screenshot is saved.</li>
+    <li>For dynamic/interactive UI (expanding FAQs, changing plans), use unique <b>subcontext</b> values for each UI state.</li>
+    <li><b>noop</b> is useful for code dry-runs, flow debugging, or test discovery.</li>
+    <li>OSS simulation is available via <code>--target</code> (e.g., <code>web</code>, <code>android</code>, <code>ios</code>, etc.).</li>
+  </ul>
+</body>
+</html>

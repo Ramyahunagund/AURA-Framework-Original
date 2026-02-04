@@ -1,0 +1,59 @@
+{
+  "credit_card_master": {
+    "credit_card_number": "5555555555554444",
+    "cvv": "123",
+    "expiration_month": "12",
+    "expiration_year": "+6",
+    "3ds_auth_result": "AUTHENTICATED"
+  },
+  "credit_card_master_2_series": {
+    "credit_card_number": "2223003122003222",
+    "cvv": "123",
+    "expiration_month": "12",
+    "expiration_year": "+6",
+    "3ds_auth_result": "AUTHENTICATED"
+  },
+  "credit_card_visa": {
+    "credit_card_number": "4242424242424242",
+    "cvv": "123",
+    "expiration_month": "12",
+    "expiration_year": "+6",
+    "3ds_auth_result": "AUTHENTICATED"
+  },
+  "credit_card_amex": {
+    "credit_card_number": "378282246310005",
+    "cvv": "1111",
+    "expiration_month": "12",
+    "expiration_year": "+6"
+  },
+  "credit_card_discover": {
+    "credit_card_number": "6011111111111117",
+    "cvv": "123",
+    "expiration_month": "12",
+    "expiration_year": "+6"
+  },
+  "direct_debit": {
+    "iban": "DE97502109000700046052",
+    "bank_name": "CITIBANK",
+    "emulated_result": "SUCCESS"
+  },
+  "direct_debit_2": {
+    "iban": "DE39200300000092441196",
+    "bank_name": "CITIBANK",
+    "emulated_result": "SUCCESS"
+  },
+  "paypal": {
+    "email": "instantink-paypaltest@yopmail.com",
+    "password": "Test@123"
+  },
+  "paypal_2": {
+    "email": "instantinkUK-paypaltest1@yopmail.com",
+    "password": "Test@123"
+  },
+  "google_pay": {
+    "email": "hello.instantink@gmail.com",
+    "password": "InstantInk@2024",
+    "emulated_result": "AUTHENTICATED"
+  },
+  "prepaid_only": {}
+}

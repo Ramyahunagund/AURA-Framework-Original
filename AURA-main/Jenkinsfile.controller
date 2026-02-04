@@ -1,0 +1,563 @@
+pipeline {
+  agent any
+
+  environment {
+    IMAGE_NAME   = 'aura-env11'
+    RESULTS_ROOT = '.aura-results'
+  }
+
+  parameters {
+    choice(name: 'TEST_GROUP', choices: ['smoke', 'high_regression', 'medium_regression', 'low_regression', 'regression'], description: 'Which test group to run')
+    string(name: 'MAX_PARALLEL', defaultValue: '10', description: 'Maximum number of tests to run concurrently (batch size)')
+  }
+
+  stages {
+    stage('Clean Workspace') {
+      steps {
+        script {
+          retry(3) {
+            cleanWs deleteDirs: true, disableDeferredWipeout: true, notFailBuild: true
+          }
+        }
+      }
+    }
+
+    stage('Checkout') {
+      steps { checkout scm }
+    }
+
+    stage('Load and Serialize Test Matrix') {
+      steps {
+        script {
+          def matrix = readJSON file: 'test_flows_config/test_suite_matrix.json'
+          def selectedGroup = matrix[params.TEST_GROUP]
+          if (!selectedGroup) {
+            error "Invalid test group: ${params.TEST_GROUP}"
+          }
+
+          def requiredKeys = ['FLOW','MODE','STACK','LOCALE','TARGET']
+          def missing = []
+          selectedGroup.eachWithIndex { t, idx ->
+            requiredKeys.each { k ->
+              if (!t.containsKey(k) || (t[k] == null) || ("${t[k]}".trim().length()==0)) {
+                missing << "Test#${idx+1} missing key: ${k} (FLOW=${t.FLOW ?: 'n/a'})"
+              }
+            }
+          }
+          if (missing) {
+            error "Required key validation failed:\n" + missing.join('\n')
+          }
+
+          env.TEST_CASES_LIST = selectedGroup.collect { groovy.json.JsonOutput.toJson(it) }.join("\n")
+          echo "Serialized ${selectedGroup.size()} tests for group '${params.TEST_GROUP}'. First entry keys: ${selectedGroup[0].keySet()}"
+
+          env.RESULTS_DIR = "${env.RESULTS_ROOT}/${env.BUILD_NUMBER}"
+          sh 'mkdir -p "${RESULTS_DIR}"'
+        }
+      }
+    }
+
+    stage('Build Docker Image (if not exists)') {
+      steps {
+        script {
+          def exists = sh(script: "docker image inspect $IMAGE_NAME > /dev/null 2>&1", returnStatus: true) == 0
+          if (!exists) {
+            echo "Building Docker image..."
+            sh "docker build -t $IMAGE_NAME ."
+          } else {
+            echo "Docker image already exists."
+          }
+        }
+      }
+    }
+
+    stage('Snapshot Existing Results (pre-run)') {
+      steps {
+        sh '''#!/usr/bin/env bash
+set -e
+root="test_flows_exec_results"
+mkdir -p "$root"
+find "$root" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort > .pre_dirs.txt || true
+'''
+      }
+    }
+
+    stage('Execute Tests (Batched Parallel)') {
+      steps {
+        script {
+          def testStrings = env.TEST_CASES_LIST ? env.TEST_CASES_LIST.readLines() : []
+          if (!testStrings) {
+            echo "No tests resolved for group ${params.TEST_GROUP}; skipping parallel execution."
+            return
+          }
+          def mpRaw = params.MAX_PARALLEL ?: '10'
+          def maxParallel = (mpRaw ==~ /\d+/) ? mpRaw.toInteger() : 10
+          if (maxParallel <= 0) {
+            echo "MAX_PARALLEL (${mpRaw}) invalid; defaulting to 10"
+            maxParallel = 10
+          }
+          echo "Total tests: ${testStrings.size()} | MAX_PARALLEL=${maxParallel}";
+
+          int batchNumber = 0
+          int executed = 0
+          while (executed < testStrings.size()) {
+            batchNumber++
+            def batchEnd = Math.min(executed + maxParallel, testStrings.size())
+            echo "Starting batch ${batchNumber} (tests ${executed+1}..${batchEnd})";
+            def branches = [:]
+            for (int i = executed; i < batchEnd; i++) {
+              def testStr = testStrings[i]
+              if (!testStr?.trim()) continue
+              def branchName = "Test${i + 1}" // global index for clarity
+              def testIndex = i
+
+              branches[branchName] = {
+                withCredentials([
+                string(credentialsId: 'GMAIL_REFRESH_TOKEN', variable: 'GMAIL_REFRESH_TOKEN'),
+                string(credentialsId: 'GMAIL_CLIENT_ID', variable: 'GMAIL_CLIENT_ID'),
+                string(credentialsId: 'GMAIL_CLIENT_SECRET', variable: 'GMAIL_CLIENT_SECRET'),
+                string(credentialsId: 'RAILS_ADMIN_USER', variable: 'RAILS_ADMIN_USER'),
+                string(credentialsId: 'RAILS_ADMIN_PASSWORD', variable: 'RAILS_ADMIN_PASSWORD'),
+                string(credentialsId: 'MONGODB_URI', variable: 'MONGODB_URI'),
+                string(credentialsId: 'MONGODB_DB_NAME', variable: 'MONGODB_DB_NAME'),
+                string(credentialsId: 'S3_ENDPOINT', variable: 'S3_ENDPOINT'),
+                string(credentialsId: 'S3_BUCKET', variable: 'S3_BUCKET'),
+                string(credentialsId: 'S3_REGION', variable: 'S3_REGION'),
+                string(credentialsId: 'S3_SECURE', variable: 'S3_SECURE'),
+                string(credentialsId: 'S3_ACCESS_KEY', variable: 'S3_ACCESS_KEY'),
+                string(credentialsId: 'S3_SECRET_KEY', variable: 'S3_SECRET_KEY'),
+                string(credentialsId: 'STRATUS_CLIENT_ID', variable: 'STRATUS_CLIENT_ID'),
+                string(credentialsId: 'UCDE_CLIENT_ID', variable: 'UCDE_CLIENT_ID'),
+                string(credentialsId: 'GEMINI_CLIENT_ID', variable: 'GEMINI_CLIENT_ID'),
+                string(credentialsId: 'PIE_STRATUS_CLIENT_SECRET', variable: 'PIE_STRATUS_CLIENT_SECRET'),
+                string(credentialsId: 'PIE_UCDE_CLIENT_SECRET', variable: 'PIE_UCDE_CLIENT_SECRET'),
+                string(credentialsId: 'PIE_GEMINI_CLIENT_SECRET', variable: 'PIE_GEMINI_CLIENT_SECRET'),
+                string(credentialsId: 'STAGE_STRATUS_CLIENT_SECRET', variable: 'STAGE_STRATUS_CLIENT_SECRET'),
+                string(credentialsId: 'STAGE_UCDE_CLIENT_SECRET', variable: 'STAGE_UCDE_CLIENT_SECRET'),
+                string(credentialsId: 'STAGE_GEMINI_CLIENT_SECRET', variable: 'STAGE_GEMINI_CLIENT_SECRET')
+              ]) {
+                def test = readJSON text: testStr
+                def args = [
+                  "--flow '${test.FLOW}'",
+                  "--mode '${test.MODE}'",
+                  "--stack '${test.STACK}'",
+                  "--locale '${test.LOCALE}'"
+                ]
+
+                if (test.HEADLESS?.toBoolean()) args << "--headless"
+                if (test.DEBUG?.toBoolean())    args << "--debug"
+                if (test.LANGUAGE)              args << "--language '${test.LANGUAGE}'"
+                if (test.PRINTER_PROFILE)       args << "--printer_profile '${test.PRINTER_PROFILE}'"
+                if (test.EASY_ENROLL)           args << "--easy_enroll '${test.EASY_ENROLL}'"
+                if (test.BIZ_MODEL)             args << "--biz_model '${test.BIZ_MODEL}'"
+                if (!test.TARGET)               error "Missing TARGET for test index ${testIndex+1} (FLOW='${test.FLOW}')"
+                args << "--target '${test.TARGET}'"
+                if (test.REQUIREMENTS)          args << "--requirements '${test.REQUIREMENTS}'"
+                if (test.SIMULATOR_PLATFORM)    args << "--simulator_platform '${test.SIMULATOR_PLATFORM}'"
+                if (test.PAYMENT_METHOD)        args << "--payment_method '${test.PAYMENT_METHOD}'"
+
+                def argsString = args.join(' ')
+                echo "[${branchName}] Executing: python3 aura.py ${argsString}"
+
+                sh """
+                  docker run --rm \\
+                    --label "jenkins-build=${env.BUILD_TAG}" \\
+                    -v "\$PWD:/app" \\
+                    -w /app \\
+                    -e HTTP_PROXY=http://manual-proxy.us.hpicorp.net:8080 \\
+                    -e HTTPS_PROXY=http://manual-proxy.us.hpicorp.net:8080 \\
+                    -e NO_PROXY=iiqaautomation.auth.hpicorp.net \\
+                    -e MONGODB_URI="\$MONGODB_URI" \\
+                    -e MONGODB_DB_NAME="\$MONGODB_DB_NAME" \\
+                    -e S3_ENDPOINT="\$S3_ENDPOINT" \\
+                    -e S3_BUCKET="\$S3_BUCKET" \\
+                    -e S3_REGION="\$S3_REGION" \\
+                    -e S3_SECURE="\$S3_SECURE" \\
+                    -e S3_ACCESS_KEY="\$S3_ACCESS_KEY" \\
+                    -e S3_SECRET_KEY="\$S3_SECRET_KEY" \\
+                    -e GMAIL_REFRESH_TOKEN="\$GMAIL_REFRESH_TOKEN" \\
+                    -e GMAIL_CLIENT_ID="\$GMAIL_CLIENT_ID" \\
+                    -e GMAIL_CLIENT_SECRET="\$GMAIL_CLIENT_SECRET" \\
+                    -e RAILS_ADMIN_USER="\$RAILS_ADMIN_USER" \\
+                    -e RAILS_ADMIN_PASSWORD="\$RAILS_ADMIN_PASSWORD" \\
+                    -e STRATUS_CLIENT_ID="\$STRATUS_CLIENT_ID" \\
+                    -e UCDE_CLIENT_ID="\$UCDE_CLIENT_ID" \\
+                    -e GEMINI_CLIENT_ID="\$GEMINI_CLIENT_ID" \\
+                    -e PIE_STRATUS_CLIENT_SECRET="\$PIE_STRATUS_CLIENT_SECRET" \\
+                    -e PIE_UCDE_CLIENT_SECRET="\$PIE_UCDE_CLIENT_SECRET" \\
+                    -e PIE_GEMINI_CLIENT_SECRET="\$PIE_GEMINI_CLIENT_SECRET" \\
+                    -e STAGE_STRATUS_CLIENT_SECRET="\$STAGE_STRATUS_CLIENT_SECRET" \\
+                    -e STAGE_UCDE_CLIENT_SECRET="\$STAGE_UCDE_CLIENT_SECRET" \\
+                    -e STAGE_GEMINI_CLIENT_SECRET="\$STAGE_GEMINI_CLIENT_SECRET" \\
+                    $IMAGE_NAME python3 aura.py ${argsString}
+                """
+              }
+              }
+            }
+            // Run this batch in parallel (fail fast within batch, continue to next batch)
+            catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+              parallel branches
+            }
+            executed = batchEnd
+          }
+          echo "Executed ${executed} tests across ${batchNumber} batch(es)."
+        }
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    // Collect only THIS build’s outputs, consolidate & publish
+    // ─────────────────────────────────────────────────────────────
+    stage('Collect & Consolidate (This Build Only)') {
+      steps {
+        script {
+          // Diff pre/post to identify just-created result dirs for this build
+          sh '''#!/usr/bin/env bash
+set -e
+root="test_flows_exec_results"
+post=".post_dirs.txt"
+find "$root" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort > "$post" || true
+comm -13 .pre_dirs.txt "$post" > .new_dirs.txt || true
+
+dest="${RESULTS_DIR}/runs"
+mkdir -p "$dest"
+while read d; do
+  [ -n "$d" ] || continue
+  echo "Collecting $root/$d -> $dest/$d"
+  rsync -a --delete "$root/$d/" "$dest/$d/" || true
+done < .new_dirs.txt
+
+echo "==== DEBUG: Listing run directories with potential reports ===="
+find "${RESULTS_DIR}/runs" -maxdepth 4 -type f -name 'report.html' -printf 'REPORT %p\n' || true
+echo "==== DEBUG: End listing ===="
+'''
+
+          // Tarballs (optional)
+          sh '''#!/usr/bin/env bash
+set -e
+runs="${RESULTS_DIR}/runs"
+if [ -d "$runs" ]; then
+  find "$runs" -mindepth 1 -maxdepth 1 -type d | while read dir; do
+    base=$(basename "$dir")
+    arc="${RESULTS_DIR}/${base}.tar.gz"
+    [ -f "$arc" ] || tar -czf "$arc" -C "$runs" "$base"
+  done
+fi
+'''
+
+          // Normalize report.html/json to each run's root
+          sh '''#!/usr/bin/env bash
+set -e
+runs="${RESULTS_DIR}/runs"
+if [ -d "$runs" ]; then
+  for dir in "$runs"/*; do
+    [ -d "$dir" ] || continue
+    rootRpt="$dir/report.html"
+    rootJson="$dir/report.json"
+    if [ ! -f "$rootRpt" ]; then
+      found="$(find "$dir" -maxdepth 4 -type f -name report.html -print -quit 2>/dev/null)"
+      [ -n "$found" ] && cp -f "$found" "$rootRpt" || true
+    fi
+    if [ ! -f "$rootJson" ]; then
+      foundJ="$(find "$dir" -maxdepth 4 -type f -name report.json -print -quit 2>/dev/null)"
+      [ -n "$foundJ" ] && cp -f "$foundJ" "$rootJson" || true
+    fi
+  done
+fi
+'''
+
+          // --- Write aggregator python to a file (no brittle inline quoting) ---
+          def aggPy = '''
+import os, json, glob, html, datetime, sys, base64
+
+ROOT = os.environ.get("RESULTS_DIR") or "."
+RUNS = os.path.join(ROOT, "runs")
+flows = []
+overall = "PASS"
+
+print(f"[Aggregator] ROOT={ROOT}")
+print(f"[Aggregator] RUNS exists={os.path.isdir(RUNS)}")
+
+run_dirs = sorted([p for p in glob.glob(os.path.join(RUNS, "*")) if os.path.isdir(p)])
+print(f"[Aggregator] Detected run directories: {len(run_dirs)}")
+for rd in run_dirs:
+    print(f"[Aggregator] RunDir: {rd}")
+
+def html_attr_escape(s: str) -> str:
+    # escape for use inside a single-quoted HTML attribute
+    return (s.replace("&","&amp;")
+             .replace("<","&lt;")
+             .replace(">","&gt;")
+             .replace("'","&#39;"))
+
+if os.path.isdir(RUNS):
+    for d in run_dirs:
+        candidates = [
+            os.path.join(d, "report.html"),
+            os.path.join(d, "test_flows_exec_results", "report.html")
+        ]
+        if not any(os.path.isfile(p) for p in candidates):
+            candidates += list(glob.glob(os.path.join(d, "**", "report.html"), recursive=True))
+
+        rpt = next((c for c in candidates if os.path.isfile(c)), None)
+        if rpt is None:
+            flows.append({
+                "name": os.path.basename(d),
+                "report_rel": None,
+                "status": "MISSING",
+                "counts": {"PASS":0, "FAIL":0, "NOT_EXECUTED":0, "PENDING":0},
+                "embed_srcdoc": None,
+                "download_datauri": None,
+                "archive_rel": None,
+            })
+            print(f"[Aggregator] MISSING report for {d}")
+            continue
+
+        json_candidates = [
+            os.path.join(os.path.dirname(rpt), "report.json"),
+            os.path.join(d, "report.json"),
+            os.path.join(d, "test_flows_exec_results", "report.json")
+        ]
+        rj = next((jc for jc in json_candidates if os.path.isfile(jc)), None)
+
+        status = "PASS"
+        counts = {"PASS":0, "FAIL":0, "NOT_EXECUTED":0, "PENDING":0}
+        if rj:
+            try:
+                with open(rj, encoding="utf-8") as jf:
+                    data = json.load(jf)
+                for s in data.get("steps", []):
+                    st = s.get("status")
+                    if st in counts:
+                        counts[st] += 1
+                if counts["FAIL"] > 0:
+                    status = "FAIL"
+                elif counts["PASS"] > 0 and counts["NOT_EXECUTED"] > 0:
+                    status = "INTERRUPTED"
+            except Exception as e:
+                print(f"[Aggregator] WARN: failed to parse {rj}: {e}")
+
+        if status == "FAIL":
+            overall = "FAIL"
+        elif status == "INTERRUPTED" and overall != "FAIL":
+            overall = "INTERRUPTED"
+
+        # Read report and prepare inline embed + download
+        report_bytes = b""
+        try:
+            with open(rpt, "rb") as rf:
+                report_bytes = rf.read()
+        except Exception as e:
+            print(f"[Aggregator] WARN: failed to read report {rpt}: {e}")
+
+        report_text = report_bytes.decode("utf-8", errors="ignore")
+        srcdoc = html_attr_escape(report_text)
+
+        b64 = base64.b64encode(report_bytes).decode("ascii") if report_bytes else ""
+        data_uri = f"data:text/html;base64,{b64}" if b64 else None
+
+        # Archive link (created earlier as ${RESULTS_DIR}/{basename}.tar.gz)
+        arch_name = os.path.basename(d) + ".tar.gz"
+        arch_abs  = os.path.join(ROOT, arch_name)
+        arch_rel  = arch_name if os.path.isfile(arch_abs) else None
+
+        flows.append({
+            "name": os.path.basename(d),
+            "report_rel": os.path.relpath(rpt, ROOT),
+            "status": status,
+            "counts": counts,
+            "embed_srcdoc": srcdoc if srcdoc else None,
+            "download_datauri": data_uri,
+            "archive_rel": arch_rel
+        })
+        print(f"[Aggregator] Added flow {os.path.basename(d)} status={status} report={os.path.relpath(rpt, ROOT)}")
+        
+summary = {
+    "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
+    "overall_status": overall,
+    "total_flows": len(flows),
+    "flows": flows
+}
+
+os.makedirs(ROOT, exist_ok=True)
+with open(os.path.join(ROOT, "aggregated_summary.json"), "w", encoding="utf-8") as f:
+    json.dump(summary, f, indent=2)
+with open(os.path.join(ROOT, "aggregated_summary.txt"), "w", encoding="utf-8") as f:
+    f.write(f"Overall: {overall}\\n")
+    for fobj in flows:
+        c = fobj["counts"]
+        f.write(f"{fobj['name']}: {fobj['status']} (PASS={c['PASS']}, FAIL={c['FAIL']}, NE={c['NOT_EXECUTED']})\\n")
+
+# Build HTML (inline embeds + download links)
+rows = []
+for fobj in flows:
+    badge = {"PASS":"#28a745","FAIL":"#dc3545","INTERRUPTED":"#ffc107","MISSING":"#6c757d"}.get(fobj["status"],"#6c757d")
+    dl_html = (f'<a class="btn" href="{fobj["download_datauri"]}" download="{fobj["name"]}_report.html">Download HTML</a> '
+               if fobj.get("download_datauri") else
+               '<span class="btn disabled" title="No report to download">Download HTML</span>')
+    dl_arc  = (f'<a class="btn" href="{fobj["archive_rel"]}">Download Artifacts (.tar.gz)</a> '
+               if fobj.get("archive_rel") else
+               '<span class="btn disabled" title="Archive not found">Download Artifacts</span>')
+    if fobj.get("embed_srcdoc"):
+        viewer = f"<iframe class=\\"viewer\\" srcdoc='{fobj['embed_srcdoc']}'></iframe>"
+    else:
+        viewer = "<em>No report.html found (stub).</em>"
+
+    rows.append(
+        "<details class=\\"flow\\">\\n"
+        "  <summary>\\n"
+        f"    <span class=\\"badge\\" style=\\"background:{badge}\\">{fobj['status']}</span>\\n"
+        f"    <code>{html.escape(fobj['name'])}</code>\\n"
+        f"    <span class=\\"small\\">PASS={fobj['counts']['PASS']} FAIL={fobj['counts']['FAIL']} NE={fobj['counts']['NOT_EXECUTED']}</span>\\n"
+        "  </summary>\\n"
+        f"  <div class=\\"actions\\">{dl_html}{dl_arc}</div>\\n"
+        f"  {viewer}\\n"
+        "</details>"
+    )
+
+title = f"AURA Consolidated — {summary['overall_status']}"
+if not flows:
+    raw_reports = []
+    if os.path.isdir(RUNS):
+        for rp in glob.glob(os.path.join(RUNS, "**", "report.html"), recursive=True):
+            raw_reports.append(os.path.relpath(rp, ROOT))
+    fallback_list = "".join(f"<li><code>{html.escape(r)}</code></li>" for r in raw_reports) or "<li><em>No report.html files discovered.</em></li>"
+    html_doc = f"""<!doctype html>
+<html><head><meta charset="utf-8"><title>AURA Consolidated – Fallback</title>
+<style>body{{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:20px}}code{{background:#f5f5f5;padding:2px 6px;border-radius:4px}}</style>
+</head><body>
+<h1>AURA Consolidated – Fallback View</h1>
+<p>No structured flows were aggregated. Listing raw discovered report paths for troubleshooting:</p>
+<ul>{fallback_list}</ul>
+</body></html>"""
+else:
+    html_doc = f"""<!doctype html>
+<html><head><meta charset="utf-8">
+<title>{html.escape(title)}</title>
+<style>
+body{{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:16px}}
+details.flow{{border:1px solid #ddd;border-radius:12px;margin:10px 0;padding:8px 12px;background:#fafafa}}
+details.flow summary{{cursor:pointer;display:flex;gap:10px;align-items:center}}
+.badge{{color:#fff;padding:2px 8px;border-radius:999px;font-size:12px}}
+.small{{font-size:12px;color:#666;margin-left:auto}}
+.actions{{margin:10px 0; display:flex; gap:10px; flex-wrap:wrap}}
+.btn{{background:#eee;border:1px solid #ccc;border-radius:8px;padding:4px 10px;text-decoration:none;color:#111}}
+.btn:hover{{background:#e6e6e6}}
+.btn.disabled{{opacity:.5;pointer-events:none}}
+.viewer{{width:100%;height:800px;border:1px solid #ccc;border-radius:8px;background:#fff}}
+code{{background:#f0f0f0;padding:2px 6px;border-radius:6px}}
+</style></head><body>
+<h1>{html.escape(title)}</h1>
+<div class="meta">Overall: <b>{html.escape(summary['overall_status'])}</b> · Total Flows: <b>{summary['total_flows']}</b> · Generated: {html.escape(summary['generated_at'])}</div>
+{''.join(rows) if rows else "<em>No flow reports found for this build.</em>"}
+</body></html>"""
+
+with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+    f.write(html_doc)
+
+print(f"Consolidated dashboard at {ROOT}/index.html; Overall={overall}; flows={len(flows)}")
+sys.exit(1 if overall != "PASS" else 0)
+'''
+          writeFile file: "${env.RESULTS_DIR}/aggregate.py", text: aggPy
+
+          // Run aggregator in docker, capture stderr (but don't fail the stage here)
+          sh """#!/usr/bin/env bash
+set -eo pipefail
+RESULTS_DIR='${env.RESULTS_DIR}'
+docker run --rm \
+  -e RESULTS_DIR="\$RESULTS_DIR" \
+  -v "\$PWD:/app" -w /app \
+  ${IMAGE_NAME} bash -c 'cd /app && python3 "\$RESULTS_DIR/aggregate.py"' \
+  2> "\$RESULTS_DIR/aggregator.stderr" || true
+"""
+
+          // Surface any Python errors
+          sh '''
+if [ -s "${RESULTS_DIR}/aggregator.stderr" ]; then
+  echo "===== aggregator.stderr (first 200 lines) ====="
+  head -n 200 "${RESULTS_DIR}/aggregator.stderr" || true
+  echo "==============================================="
+fi
+'''
+
+          // Ensure readable & fallback index if missing/empty
+          sh '''#!/usr/bin/env bash
+set -e
+ROOT="${RESULTS_DIR}"
+[ -d "${ROOT}" ] && chmod -R u+rwX,go+rX "${ROOT}" || true
+if [ ! -s "${ROOT}/index.html" ]; then
+  echo "[Consolidator] index.html missing or empty — creating fallback."
+  mkdir -p "${ROOT}"
+  {
+    echo '<!doctype html><meta charset="utf-8"><title>AURA Consolidated – Fallback</title>'
+    echo '<style>body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:16px} code{background:#f0f0f0;padding:2px 6px;border-radius:6px}</style>'
+    echo '<h1>AURA Consolidated – Fallback</h1>'
+    echo '<p>Structured aggregator output was unavailable. Listing discovered reports for this build:</p>'
+    echo '<ul>'
+    (cd "${ROOT}" && find "runs" -type f -name 'report.html' -printf '<li><a href="%p">%p</a></li>\n' | sed 's#^runs/##' | sort) || true
+    echo '</ul>'
+  } > "${ROOT}/index.html"
+fi
+echo "[Consolidator] Using: ${ROOT}/index.html (size $(wc -c < "${ROOT}/index.html") bytes)"
+'''
+          // Archive + publish
+          archiveArtifacts artifacts: "${env.RESULTS_DIR}/**/*.tar.gz,${env.RESULTS_DIR}/**/report.html,${env.RESULTS_DIR}/**/report.json,${env.RESULTS_DIR}/index.html,${env.RESULTS_DIR}/aggregated_summary.*",
+                            fingerprint: true, allowEmptyArchive: true
+
+          publishHTML target: [
+            reportDir  : "${env.RESULTS_DIR}",
+            reportFiles: "index.html",
+            reportName : "AURA Consolidated (This Build)",
+            keepAll    : true,
+            allowMissing: false
+          ]
+
+          publishHTML target: [
+            reportDir  : "${env.RESULTS_DIR}",
+            reportFiles: "index.html",
+            reportName : "AURA Consolidated (Last Build)",
+            keepAll    : false,
+            alwaysLinkToLastBuild: true,
+            allowMissing: false
+          ]
+
+          if (currentBuild.currentResult == null || currentBuild.currentResult == 'SUCCESS') {
+            sh '''
+set -e
+rm -rf .aura-results/lastSuccessfulBulk
+mkdir -p .aura-results/lastSuccessfulBulk
+rsync -a --delete "${RESULTS_DIR}/" ".aura-results/lastSuccessfulBulk/"
+'''
+          }
+          if (fileExists('.aura-results/lastSuccessfulBulk/index.html')) {
+            publishHTML target: [
+              reportDir  : '.aura-results/lastSuccessfulBulk',
+              reportFiles: 'index.html',
+              reportName : 'AURA Consolidated (Last Successful)',
+              keepAll    : false,
+              allowMissing: false
+            ]
+          }
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      script {
+        // Clean up Docker containers and volumes
+        sh '''
+          docker ps -aq --filter "label=jenkins-build=${BUILD_TAG}" | xargs -r docker rm -f || true
+          docker volume prune -f || true
+        '''
+        // Attempt to clean up old result directories (keep last 10)
+        sh '''
+          find test_flows_exec_results -mindepth 1 -maxdepth 1 -type d 2>/dev/null | sort -r | tail -n +11 | xargs -r rm -rf || true
+        '''
+      }
+    }
+    success { echo "✅ All ${params.TEST_GROUP} tests completed successfully." }
+    failure { echo "❌ One or more tests failed in group: ${params.TEST_GROUP}" }
+  }
+}
