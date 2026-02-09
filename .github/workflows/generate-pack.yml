@@ -1,13 +1,11 @@
 name: Generate QA Pack and Upload to S3
 
 on:
-  # Trigger automatically on commits to main
+  # Trigger manually or on commits to main
+  workflow_dispatch:
   push:
     branches:
       - main
-
-  # Optional: manual trigger
-  workflow_dispatch:
 
 jobs:
   generate-pack:
@@ -29,10 +27,10 @@ jobs:
         run: |
           pip install boto3
 
-      # Step 4: Run the generate_pack script
+      # Step 4: Run the generate_pack.py script
       - name: Run generate_pack
         run: |
-          python scripts/generate_pack.py \
+          python AURA-main/generate_pack.py \
             --repo_url "https://github.com/Ramyahunagund/AURA-Framework-Original" \
             --output_dir "s3://lwafiles/codebase/" \
             --work_dir "_work"
