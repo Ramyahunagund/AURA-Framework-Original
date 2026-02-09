@@ -1,34 +1,49 @@
-name: Generate Pack
+name: Generate QA Pack and Upload to S3
 
 on:
+  # Manual trigger via GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: "Git repository to scan"
+        required: true
+      s3_output:
+        description: "S3 output path"
+        required: true
+
+  # Automatic trigger on commits to main
   push:
     branches:
-      - main
+      - main  # Change to '**' to trigger on all branches
 
 jobs:
   generate-pack:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      # Step 1: Checkout the repository
+      - name: Checkout tool repo
+        uses: actions/checkout@v4
 
+      # Step 2: Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
-          pip install pytest
+          pip install boto3
 
-      - name: Run Pytest Code Converter
+      # Step 4: Run the generate_pack script
+      - name: Run generate_pack
         run: |
-          python M_Pytest_code_converter.py
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add .
-          git commit -m "Completed"
-          git push
+          python generate_pack.py \
+            --repo_url "${{ github.event.inputs.repo_url || github.repository }}" \
+            --output_dir "${{ github.event.inputs.s3_output || 's3://default-bucket/qa-pack/' }}" \
+            --work_dir "_work"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
