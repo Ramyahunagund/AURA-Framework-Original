@@ -1,28 +1,21 @@
 name: Generate QA Pack and Upload to S3
 
 on:
-  # Manual trigger via GitHub Actions UI
-  workflow_dispatch:
-    inputs:
-      repo_url:
-        description: "Git repository to scan"
-        required: true
-      s3_output:
-        description: "S3 output path"
-        required: true
-
-  # Automatic trigger on commits to main
+  # Trigger automatically on commits to main
   push:
     branches:
-      - main  # Change to '**' to trigger on all branches
+      - main
+
+  # Optional: manual trigger
+  workflow_dispatch:
 
 jobs:
   generate-pack:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout tool repo
+      # Step 1: Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       # Step 2: Set up Python
@@ -39,9 +32,9 @@ jobs:
       # Step 4: Run the generate_pack script
       - name: Run generate_pack
         run: |
-          python generate_pack.py \
-            --repo_url "${{ github.event.inputs.repo_url || github.repository }}" \
-            --output_dir "${{ github.event.inputs.s3_output || 's3://default-bucket/qa-pack/' }}" \
+          python scripts/generate_pack.py \
+            --repo_url "https://github.com/Ramyahunagund/AURA-Framework-Original" \
+            --output_dir "s3://lwafiles/codebase/" \
             --work_dir "_work"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
