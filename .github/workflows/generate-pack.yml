@@ -1,73 +1,33 @@
-name: Generate QA Context Pack and Upload to S3
- 
-on:
+name: Generate QA Pack and Upload to S3
 
+on:
   workflow_dispatch:
 
-    inputs:
-
-      repo_url:
-
-        description: "Public Git repository URL to scan"
-
-        required: true
-
-      s3_output:
-
-        description: "S3 output URI (e.g. s3://bucket/path/)"
-
-        required: true
- 
 jobs:
-
-  generate-qa-pack:
-
+  generate-pack:
     runs-on: ubuntu-latest
- 
+
     steps:
-
       - name: Checkout repository
-
         uses: actions/checkout@v4
- 
+
       - name: Set up Python
-
         uses: actions/setup-python@v5
-
         with:
-
           python-version: "3.10"
- 
-      - name: Install Python dependencies
 
+      - name: Install dependencies
         run: |
-
           python -m pip install --upgrade pip
-
           pip install boto3
- 
-      - name: Run QA Context Pack Generator
 
-        env:
-
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-
+      - name: Run QA pack generator
         run: |
-
           python AURA-main/generate_pack.py \
-
-            --repo_url "${{ https://github.com/Ramyahunagund/AURA-Framework-Original/ }}" \
-
-            --output_dir "${{ s3://lwafiles/codebase/ }}" \
-
-            --work_dir "_workdir"
- 
-      - name: Completion marker
-
-        run: echo "✅ QA Context Pack generation completed successfully"
-
- 
+            --repo_url "https://github.com/Ramyahunagund/AURA-Framework-Original" \
+            --output_dir "s3://lwafiles/codebase/" \
+            --work_dir "_work"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
