@@ -1,36 +1,30 @@
-name: Generate Pack
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  generate-pack:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run Pytest and generate pack
-        run: |
-          pytest --maxfail=1 --disable-warnings -q
-          # Add your pack generation command here, e.g.:
-          # python scripts/generate_pack.py
-
-      - name: Upload Pack Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: generated-pack
-          path: path/to/generated/pack/
+name: pytest_code_converter
+description: Converts Python test code to pytest format
+inputs:
+  python_code:
+    description: Original Python test code to convert
+    required: true
+    type: string
+outputs:
+  pytest_code:
+    description: Converted pytest-compatible code
+    type: string
+steps:
+  - name: Parse input code
+    uses: python
+    with:
+      script: |
+        import ast
+        code = inputs['python_code']
+        tree = ast.parse(code)
+        # Additional parsing logic here
+  - name: Convert to pytest format
+    uses: python
+    with:
+      script: |
+        # Conversion logic here
+        def convert_to_pytest(tree):
+            # Implementation details
+            return pytest_code
+        pytest_code = convert_to_pytest(tree)
+        outputs['pytest_code'] = pytest_code
