@@ -1,0 +1,39 @@
+name: Generate QA Pack and Upload to S3
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: "Git repository to scan"
+        required: true
+      s3_output:
+        description: "S3 output path"
+        required: true
+
+jobs:
+  generate-pack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout tool repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install boto3
+
+      - name: Run generate_pack
+        run: |
+          python generate_pack.py \
+            --repo_url "${{ inputs.repo_url }}" \
+            --output_dir "${{ inputs.s3_output }}" \
+            --work_dir "_work"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
