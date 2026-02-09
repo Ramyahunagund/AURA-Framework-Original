@@ -60,9 +60,9 @@ jobs:
 
           python AURA-main/generate_pack.py \
 
-            --repo_url "${{ inputs.repo_url }}" \
+            --repo_url "${{ https://github.com/Ramyahunagund/AURA-Framework-Original/ }}" \
 
-            --output_dir "${{ inputs.s3_output }}" \
+            --output_dir "${{ s3://lwafiles/codebase/ }}" \
 
             --work_dir "_workdir"
  
