@@ -1,40 +1,38 @@
 name: Generate QA Pack and Upload to S3
 
 on:
-  # Trigger manually or on commits to main
-  workflow_dispatch:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  generate-pack:
+  generate-qa-pack:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
-      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
-          pip install boto3
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      # Step 4: Run the generate_pack.py script
-      - name: Run generate_pack
+      - name: Generate QA Pack
         run: |
-          python AURA-main/generate_pack.py \
-            --repo_url "https://github.com/Ramyahunagund/AURA-Framework-Original" \
-            --output_dir "s3://lwafiles/codebase/" \
-            --work_dir "_work"
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          python scripts/generate_qa_pack.py
+
+      - name: Upload QA Pack to S3
+        uses: aws-actions/s3-upload@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          bucket: qa-pack-bucket
+          file: output/qa_pack.zip
+          key: qa_pack.zip
