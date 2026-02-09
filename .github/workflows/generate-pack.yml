@@ -1,30 +1,43 @@
-name: pytest_code_converter
-description: Converts Python test code to pytest format
-inputs:
-  python_code:
-    description: Original Python test code to convert
-    required: true
-    type: string
-outputs:
-  pytest_code:
-    description: Converted pytest-compatible code
-    type: string
-steps:
-  - name: Parse input code
-    uses: python
-    with:
-      script: |
-        import ast
-        code = inputs['python_code']
-        tree = ast.parse(code)
-        # Additional parsing logic here
-  - name: Convert to pytest format
-    uses: python
-    with:
-      script: |
-        # Conversion logic here
-        def convert_to_pytest(tree):
-            # Implementation details
-            return pytest_code
-        pytest_code = convert_to_pytest(tree)
-        outputs['pytest_code'] = pytest_code
+name: Generate QA Pack and Upload to S3
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: "Git repository to scan"
+        required: true
+      s3_output:
+        description: "S3 output path"
+        required: true
+
+jobs:
+  generate-pack:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout tool repo
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install boto3
+
+      # Step 4: Run the generate_pack script
+      - name: Run generate_pack
+        run: |
+          python generate_pack.py \
+            --repo_url "${{ inputs.repo_url }}" \
+            --output_dir "${{ inputs.s3_output }}" \
+            --work_dir "_work"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
